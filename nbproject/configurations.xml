@@ -1,0 +1,1339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="lib">
+        <df name="freertos-10.0.1">
+          <df name="portable">
+            <df name="BCC">
+              <df name="16BitDOS">
+                <df name="common">
+                  <in>portcomn.c</in>
+                </df>
+                <df name="Flsh186">
+                  <in>port.c</in>
+                </df>
+                <df name="PC">
+                  <in>port.c</in>
+                </df>
+              </df>
+            </df>
+            <df name="CCS">
+              <df name="ARM_CM3">
+                <in>port.c</in>
+                <in>portasm.asm</in>
+              </df>
+              <df name="ARM_CM4F">
+                <in>port.c</in>
+                <in>portasm.asm</in>
+              </df>
+              <df name="ARM_Cortex-R4">
+                <in>port.c</in>
+                <in>portASM.asm</in>
+              </df>
+              <df name="MSP430X">
+                <in>port.c</in>
+                <in>portext.asm</in>
+              </df>
+            </df>
+            <df name="CodeWarrior">
+              <df name="ColdFire_V1">
+                <in>port.c</in>
+                <in>portasm.S</in>
+              </df>
+              <df name="ColdFire_V2">
+                <in>port.c</in>
+                <in>portasm.S</in>
+              </df>
+              <df name="HCS12">
+                <in>port.c</in>
+              </df>
+            </df>
+            <df name="Common">
+              <in>mpu_wrappers.c</in>
+            </df>
+            <df name="GCC">
+              <df name="ARM7_AT91FR40008">
+                <in>port.c</in>
+                <in>portISR.c</in>
+              </df>
+              <df name="ARM7_AT91SAM7S">
+                <in>lib_AT91SAM7X256.c</in>
+                <in>port.c</in>
+                <in>portISR.c</in>
+              </df>
+              <df name="ARM7_LPC2000">
+                <in>port.c</in>
+                <in>portISR.c</in>
+              </df>
+              <df name="ARM7_LPC23xx">
+                <in>port.c</in>
+                <in>portISR.c</in>
+              </df>
+              <df name="ARM_CA53_64_BIT">
+                <in>port.c</in>
+                <in>portASM.S</in>
+              </df>
+              <df name="ARM_CA9">
+                <in>port.c</in>
+                <in>portASM.S</in>
+              </df>
+              <df name="ARM_CM0">
+                <in>port.c</in>
+              </df>
+              <df name="ARM_CM3">
+                <in>port.c</in>
+              </df>
+              <df name="ARM_CM3_MPU">
+                <in>port.c</in>
+              </df>
+              <df name="ARM_CM4_MPU">
+                <in>port.c</in>
+              </df>
+              <df name="ARM_CM4F">
+                <in>port.c</in>
+              </df>
+              <df name="ARM_CM7">
+                <df name="r0p1">
+                  <in>port.c</in>
+                </df>
+              </df>
+              <df name="ARM_CR5">
+                <in>port.c</in>
+                <in>portASM.S</in>
+              </df>
+              <df name="ARM_CRx_No_GIC">
+                <in>port.c</in>
+                <in>portASM.S</in>
+              </df>
+              <df name="ATMega323">
+                <in>port.c</in>
+              </df>
+              <df name="AVR32_UC3">
+                <in>exception.S</in>
+                <in>port.c</in>
+              </df>
+              <df name="ColdFire_V2">
+                <in>port.c</in>
+                <in>portasm.S</in>
+              </df>
+              <df name="CORTUS_APS3">
+                <in>port.c</in>
+              </df>
+              <df name="H8S2329">
+                <in>port.c</in>
+              </df>
+              <df name="HCS12">
+                <in>port.c</in>
+              </df>
+              <df name="IA32_flat">
+                <in>port.c</in>
+                <in>portASM.S</in>
+              </df>
+              <df name="MCF5235">
+                <in>port.c</in>
+              </df>
+              <df name="MicroBlaze">
+                <in>port.c</in>
+                <in>portasm.s</in>
+              </df>
+              <df name="MicroBlazeV8">
+                <in>port.c</in>
+                <in>port_exceptions.c</in>
+                <in>portasm.S</in>
+              </df>
+              <df name="MicroBlazeV9">
+                <in>port.c</in>
+                <in>port_exceptions.c</in>
+                <in>portasm.S</in>
+              </df>
+              <df name="MSP430F449">
+                <in>port.c</in>
+              </df>
+              <df name="NiosII">
+                <in>port.c</in>
+                <in>port_asm.S</in>
+              </df>
+              <df name="PPC405_Xilinx">
+                <in>port.c</in>
+                <in>portasm.S</in>
+              </df>
+              <df name="PPC440_Xilinx">
+                <in>port.c</in>
+                <in>portasm.S</in>
+              </df>
+              <df name="RL78">
+                <in>port.c</in>
+                <in>portasm.S</in>
+              </df>
+              <df name="RX100">
+                <in>port.c</in>
+              </df>
+              <df name="RX600">
+                <in>port.c</in>
+              </df>
+              <df name="RX600v2">
+                <in>port.c</in>
+              </df>
+              <df name="STR75x">
+                <in>port.c</in>
+                <in>portISR.c</in>
+              </df>
+              <df name="TriCore_1782">
+                <in>port.c</in>
+                <in>porttrap.c</in>
+              </df>
+            </df>
+            <df name="IAR">
+              <df name="78K0R">
+                <in>port.c</in>
+              </df>
+              <df name="ARM_CA5_No_GIC">
+                <in>port.c</in>
+                <in>portASM.s</in>
+              </df>
+              <df name="ARM_CA9">
+                <in>port.c</in>
+                <in>portASM.s</in>
+              </df>
+              <df name="ARM_CM0">
+                <in>port.c</in>
+                <in>portasm.s</in>
+              </df>
+              <df name="ARM_CM3">
+                <in>port.c</in>
+                <in>portasm.s</in>
+              </df>
+              <df name="ARM_CM4F">
+                <in>port.c</in>
+                <in>portasm.s</in>
+              </df>
+              <df name="ARM_CM4F_MPU">
+                <in>port.c</in>
+                <in>portasm.s</in>
+              </df>
+              <df name="ARM_CM7">
+                <df name="r0p1">
+                  <in>port.c</in>
+                  <in>portasm.s</in>
+                </df>
+              </df>
+              <df name="ARM_CRx_No_GIC">
+                <in>port.c</in>
+                <in>portASM.s</in>
+              </df>
+              <df name="ATMega323">
+                <in>port.c</in>
+              </df>
+              <df name="AtmelSAM7S64">
+                <in>port.c</in>
+              </df>
+              <df name="AtmelSAM9XE">
+                <in>port.c</in>
+              </df>
+              <df name="AVR32_UC3">
+                <in>port.c</in>
+                <in>read.c</in>
+                <in>write.c</in>
+              </df>
+              <df name="LPC2000">
+                <in>port.c</in>
+              </df>
+              <df name="MSP430">
+                <in>port.c</in>
+              </df>
+              <df name="MSP430X">
+                <in>port.c</in>
+              </df>
+              <df name="RL78">
+                <in>port.c</in>
+              </df>
+              <df name="RX100">
+                <in>port.c</in>
+                <in>port_asm.s</in>
+              </df>
+              <df name="RX600">
+                <in>port.c</in>
+                <in>port_asm.s</in>
+              </df>
+              <df name="RXv2">
+                <in>port.c</in>
+                <in>port_asm.s</in>
+              </df>
+              <df name="STR71x">
+                <in>port.c</in>
+              </df>
+              <df name="STR75x">
+                <in>port.c</in>
+              </df>
+              <df name="STR91x">
+                <in>port.c</in>
+              </df>
+              <df name="V850ES">
+                <in>port.c</in>
+              </df>
+            </df>
+            <df name="MemMang">
+              <in>heap_1.c</in>
+              <in>heap_2.c</in>
+              <in>heap_3.c</in>
+              <in>heap_4.c</in>
+              <in>heap_5.c</in>
+            </df>
+            <df name="MikroC">
+              <df name="ARM_CM4F">
+                <in>port.c</in>
+              </df>
+            </df>
+            <df name="MPLAB">
+              <df name="PIC18F">
+                <in>port.c</in>
+              </df>
+              <df name="PIC24_dsPIC">
+                <in>port.c</in>
+                <in>portasm_PIC24.S</in>
+                <in>portasm_dsPIC.S</in>
+              </df>
+              <df name="PIC32MEC14xx">
+                <in>port.c</in>
+                <in>port_asm.S</in>
+              </df>
+              <df name="PIC32MX">
+                <in>port.c</in>
+                <in>port_asm.S</in>
+              </df>
+              <df name="PIC32MZ">
+                <in>port.c</in>
+                <in>port_asm.S</in>
+              </df>
+            </df>
+            <df name="MSVC-MingW">
+              <in>port.c</in>
+            </df>
+            <df name="oWatcom">
+              <df name="16BitDOS">
+                <df name="common">
+                  <in>portcomn.c</in>
+                </df>
+                <df name="Flsh186">
+                  <in>port.c</in>
+                </df>
+                <df name="PC">
+                  <in>port.c</in>
+                </df>
+              </df>
+            </df>
+            <df name="Paradigm">
+              <df name="Tern_EE">
+                <df name="large_untested">
+                  <in>port.c</in>
+                </df>
+                <df name="small">
+                  <in>port.c</in>
+                </df>
+              </df>
+            </df>
+            <df name="Renesas">
+              <df name="RX100">
+                <in>port.c</in>
+              </df>
+              <df name="RX200">
+                <in>port.c</in>
+              </df>
+              <df name="RX600">
+                <in>port.c</in>
+              </df>
+              <df name="RX600v2">
+                <in>port.c</in>
+              </df>
+              <df name="SH2A_FPU">
+                <in>port.c</in>
+              </df>
+            </df>
+            <df name="Rowley">
+              <df name="MSP430F449">
+                <in>port.c</in>
+                <in>portext.asm</in>
+              </df>
+            </df>
+            <df name="RVDS">
+              <df name="ARM7_LPC21xx">
+                <in>port.c</in>
+                <in>portASM.s</in>
+              </df>
+              <df name="ARM_CA9">
+                <in>port.c</in>
+                <in>portASM.s</in>
+              </df>
+              <df name="ARM_CM0">
+                <in>port.c</in>
+              </df>
+              <df name="ARM_CM3">
+                <in>port.c</in>
+              </df>
+              <df name="ARM_CM4_MPU">
+                <in>port.c</in>
+              </df>
+              <df name="ARM_CM4F">
+                <in>port.c</in>
+              </df>
+              <df name="ARM_CM7">
+                <df name="r0p1">
+                  <in>port.c</in>
+                </df>
+              </df>
+            </df>
+            <df name="SDCC">
+              <df name="Cygnal">
+                <in>port.c</in>
+              </df>
+            </df>
+            <df name="Softune">
+              <df name="MB91460">
+                <in>__STD_LIB_sbrk.c</in>
+                <in>port.c</in>
+              </df>
+              <df name="MB96340">
+                <in>__STD_LIB_sbrk.c</in>
+                <in>port.c</in>
+              </df>
+            </df>
+            <df name="Tasking">
+              <df name="ARM_CM4F">
+                <in>port.c</in>
+                <in>port_asm.asm</in>
+              </df>
+            </df>
+            <df name="WizC">
+              <df name="PIC18">
+                <df name="Drivers">
+                  <df name="Tick">
+                    <in>Tick.c</in>
+                    <in>isrTick.c</in>
+                  </df>
+                </df>
+                <in>port.c</in>
+              </df>
+            </df>
+          </df>
+          <in>croutine.c</in>
+          <in>event_groups.c</in>
+          <in>list.c</in>
+          <in>queue.c</in>
+          <in>stream_buffer.c</in>
+          <in>tasks.c</in>
+          <in>timers.c</in>
+        </df>
+        <df name="startup">
+          <in>startup_ARMCM0.S</in>
+          <in>startup_ARMCM3.S</in>
+          <in>startup_ARMCM4.S</in>
+          <in>startup_ARMCM7.S</in>
+        </df>
+      </df>
+      <df name="module">
+        <df name="rfa-core">
+          <df name="src">
+            <in>firmware.c</in>
+            <in>kernel.c</in>
+            <in>message_bus.c</in>
+            <in>module.c</in>
+            <in>rfa_core.c</in>
+          </df>
+        </df>
+      </df>
+      <df name="test-module">
+        <df name="rfa-core-test">
+          <df name="src">
+            <in>rfa_core_test.c</in>
+          </df>
+        </df>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <incDir>
+              <pElem>.</pElem>
+            </incDir>
+          </cTool>
+          <ccTool>
+            <incDir>
+              <pElem>.</pElem>
+            </incDir>
+          </ccTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="lib/freertos-10.0.1/croutine.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/event_groups.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/list.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/BCC/16BitDOS/Flsh186/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/BCC/16BitDOS/PC/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/BCC/16BitDOS/common/portcomn.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/CCS/ARM_CM3/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/CCS/ARM_CM3/portasm.asm"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/CCS/ARM_CM4F/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/CCS/ARM_CM4F/portasm.asm"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/CCS/ARM_Cortex-R4/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/CCS/ARM_Cortex-R4/portASM.asm"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/CCS/MSP430X/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/CCS/MSP430X/portext.asm"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/CodeWarrior/ColdFire_V1/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/CodeWarrior/ColdFire_V1/portasm.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/CodeWarrior/ColdFire_V2/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/CodeWarrior/ColdFire_V2/portasm.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/CodeWarrior/HCS12/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/Common/mpu_wrappers.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM7_AT91FR40008/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM7_AT91FR40008/portISR.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM7_AT91SAM7S/lib_AT91SAM7X256.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM7_AT91SAM7S/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM7_AT91SAM7S/portISR.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM7_LPC2000/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM7_LPC2000/portISR.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM7_LPC23xx/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM7_LPC23xx/portISR.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM_CA53_64_BIT/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM_CA53_64_BIT/portASM.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM_CA9/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM_CA9/portASM.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM_CM0/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM_CM3/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM_CM3_MPU/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM_CM4F/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM_CM4_MPU/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM_CM7/r0p1/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM_CR5/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM_CR5/portASM.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM_CRx_No_GIC/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ARM_CRx_No_GIC/portASM.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ATMega323/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/AVR32_UC3/exception.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/AVR32_UC3/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/CORTUS_APS3/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ColdFire_V2/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/ColdFire_V2/portasm.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/H8S2329/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/HCS12/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/IA32_flat/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/IA32_flat/portASM.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/MCF5235/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/MSP430F449/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/MicroBlaze/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/MicroBlaze/portasm.s"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/MicroBlazeV8/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/MicroBlazeV8/port_exceptions.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/MicroBlazeV8/portasm.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/MicroBlazeV9/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/MicroBlazeV9/port_exceptions.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/MicroBlazeV9/portasm.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/NiosII/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/NiosII/port_asm.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/PPC405_Xilinx/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/PPC405_Xilinx/portasm.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/PPC440_Xilinx/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/PPC440_Xilinx/portasm.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/RL78/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/RL78/portasm.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/RX100/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/RX600/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/RX600v2/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/STR75x/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/STR75x/portISR.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/TriCore_1782/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/GCC/TriCore_1782/porttrap.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/78K0R/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ARM_CA5_No_GIC/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ARM_CA5_No_GIC/portASM.s"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ARM_CA9/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ARM_CA9/portASM.s"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ARM_CM0/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ARM_CM0/portasm.s"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ARM_CM3/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ARM_CM3/portasm.s"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ARM_CM4F/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ARM_CM4F/portasm.s"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ARM_CM4F_MPU/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ARM_CM4F_MPU/portasm.s"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ARM_CM7/r0p1/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ARM_CM7/r0p1/portasm.s"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ARM_CRx_No_GIC/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ARM_CRx_No_GIC/portASM.s"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/ATMega323/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/AVR32_UC3/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/AVR32_UC3/read.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/AVR32_UC3/write.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/AtmelSAM7S64/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/AtmelSAM9XE/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/LPC2000/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/MSP430/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/MSP430X/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/RL78/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/RX100/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/RX100/port_asm.s"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/RX600/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/RX600/port_asm.s"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/RXv2/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/RXv2/port_asm.s"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/STR71x/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/STR75x/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/STR91x/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/IAR/V850ES/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MPLAB/PIC18F/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MPLAB/PIC24_dsPIC/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MPLAB/PIC24_dsPIC/portasm_PIC24.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MPLAB/PIC24_dsPIC/portasm_dsPIC.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MPLAB/PIC32MEC14xx/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MPLAB/PIC32MEC14xx/port_asm.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MPLAB/PIC32MX/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MPLAB/PIC32MX/port_asm.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MPLAB/PIC32MZ/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MPLAB/PIC32MZ/port_asm.S"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MSVC-MingW/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MemMang/heap_1.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MemMang/heap_2.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MemMang/heap_3.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MemMang/heap_4.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MemMang/heap_5.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/MikroC/ARM_CM4F/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/Paradigm/Tern_EE/large_untested/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/Paradigm/Tern_EE/small/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/RVDS/ARM7_LPC21xx/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/RVDS/ARM7_LPC21xx/portASM.s"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/RVDS/ARM_CA9/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/RVDS/ARM_CA9/portASM.s"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/RVDS/ARM_CM0/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/RVDS/ARM_CM3/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/RVDS/ARM_CM4F/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/RVDS/ARM_CM4_MPU/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/RVDS/ARM_CM7/r0p1/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/Renesas/RX100/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/Renesas/RX200/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/Renesas/RX600/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/Renesas/RX600v2/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/Renesas/SH2A_FPU/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/Rowley/MSP430F449/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/Rowley/MSP430F449/portext.asm"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/SDCC/Cygnal/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/Softune/MB91460/__STD_LIB_sbrk.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/Softune/MB91460/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/Softune/MB96340/__STD_LIB_sbrk.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/Softune/MB96340/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/Tasking/ARM_CM4F/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/Tasking/ARM_CM4F/port_asm.asm"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/WizC/PIC18/Drivers/Tick/Tick.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/WizC/PIC18/Drivers/Tick/isrTick.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/WizC/PIC18/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/oWatcom/16BitDOS/Flsh186/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/oWatcom/16BitDOS/PC/port.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/portable/oWatcom/16BitDOS/common/portcomn.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/queue.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/stream_buffer.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/tasks.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/freertos-10.0.1/timers.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/startup/startup_ARMCM0.S" ex="false" tool="4" flavor2="0">
+      </item>
+      <item path="lib/startup/startup_ARMCM3.S" ex="false" tool="4" flavor2="0">
+      </item>
+      <item path="lib/startup/startup_ARMCM4.S" ex="false" tool="4" flavor2="0">
+      </item>
+      <item path="lib/startup/startup_ARMCM7.S" ex="false" tool="4" flavor2="0">
+      </item>
+      <item path="module/rfa-core/src/firmware.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="module/rfa-core/src/kernel.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="module/rfa-core/src/message_bus.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="module/rfa-core/src/module.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="module/rfa-core/src/rfa_core.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test-module/rfa-core-test/src/rfa_core_test.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
