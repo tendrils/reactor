@@ -20,6 +20,7 @@
 
 #include "chip.h"
 #include "board.h"
+#include "kernel.h"
 
 // API return codes
 typedef enum api_result {

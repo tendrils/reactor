@@ -14,8 +14,8 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#ifdef RFA_BOARD_SAME70_XPLD
-#   include "board/same70-xpld.h"
+#if (RFA_BOARD == RFA_BOARD_SAME70_XPLD)
+#   include "board/atmel/same70-xpld.h"
 #else
 #   error "No supported board model selected"
 #endif

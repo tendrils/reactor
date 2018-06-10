@@ -1,8 +1,10 @@
-# Select Core
-CORTEX_M=7
-FPU_ARCH=-mfpu=fpv5-d16
+# Hardware architecture
+CPU_ARCH=cortex-m7
+FPU_ARCH=fpv5-d16
 
+CPU_FLAGS=-mthumb -mcpu=$(CPU_ARCH)
 FPU_FLAGS=-mfloat-abi=hard -mfpu=$(FPU_ARCH)
+ARCH_FLAGS=$(CPU_FLAGS) $(FPU_FLAGS)
 
 # Use newlib-nano. To disable it, specify USE_NANO=
 USE_NANO=--specs=nano.specs
@@ -10,8 +12,6 @@ USE_NANO=--specs=nano.specs
 # Use semihosting or not
 USE_SEMIHOST=--specs=rdimon.specs
 USE_NOHOST=--specs=nosys.specs
-
-CORE=CM$(CORTEX_M)
 
 # Environment 
 MKDIR=mkdir
@@ -28,11 +28,8 @@ CXX=${XC_PREFIX}g++
 AS=${XC_PREFIX}as
 LD=${XC_PREFIX}ld
 
-# Options for specific architecture
-ARCH_FLAGS=-mthumb -mcpu=cortex-m$(CORTEX_M) $(FPU_FLAGS)
-
 # Startup code
-STARTUP=$(BASE)/startup/startup_ARM$(CORE).S
+STARTUP=$(BASE)/lib/chip/SAME70_DFP/2.2.91/same70b/gcc/gcc/startup_same70q21b.c
 
 # -Os -flto -ffunction-sections -fdata-sections to compile for code size
 CFLAGS=$(ARCH_FLAGS) $(STARTUP_DEFS) -Os -flto -ffunction-sections -fdata-sections

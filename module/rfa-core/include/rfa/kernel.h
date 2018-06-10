@@ -24,5 +24,9 @@ os_queue_t rfa_kernel_queue_alloc(kernel_if_t *ki, uint8_t cell_size, uint8_t ce
 
 os_task_t rfa_kernel_task_alloc(kernel_if_t *ki);
 
+rfa_result_t rfa_kernel_scheduler_start(kernel_if_t *ki);
+
+rfa_result_t rfa_kernel_scheduler_pause(kernel_if_t *ki);
+
 #endif /* RFA_KERNEL_H */
 

@@ -5,25 +5,29 @@
  */
 
 /* 
- * File:   chip/line/sam_e70/q21.h
+ * File:   sam_e70.h
  * Author: Tendril
  *
- * Created on May 21, 2018, 8:09 AM
+ * Created on May 21, 2018, 8:02 AM
  */
 
-#ifndef Q21_H
-#define Q21_H
+#ifndef CHIP_SAME70_H
+#define CHIP_SAME70_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-
-
+#if (RFA_CHIP_MODEL == RFA_CHIP_MODEL_ATMEL_SAME70_Q21B)
+#   define __SAME70Q21B__
+#   include "sam.h"
+#else
+#   error "No supported chip line selected"
+#endif
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* Q21_H */
+#endif /* CHIP_SAME70_H */
 

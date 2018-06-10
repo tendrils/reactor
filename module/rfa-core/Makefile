@@ -1,11 +1,11 @@
 NAME=rfa-core
-CONF=debug-semihost
+CONF=debug_arm-eabi-semihost
 BOARD=same70-xpld
 
 BASE=../..
 
 CONF_PATH=${CONF}/${BOARD}
-CONF_DIR=conf/${CONF_PATH}
+CONF_DIR=${BASE}/conf/${CONF_PATH}
 OBJECTDIR=obj/${CONF_PATH}
 DISTDIR=dist/${CONF_PATH}
 
@@ -14,9 +14,9 @@ STARTUP_DEFS=-D__NO_SYSTEM_INIT
 CXXFLAGS+=-D__STARTUP_COPY_MULTIPLE -D__STARTUP_CLEAR_BSS_MULTIPLE
 
 
-OBJECTFILES=rfa_core.o 
+OBJECTFILES=${OBJECTDIR}/rfa_core.o ${OBJECTDIR}/startup.o
 
-include vars.mk
+include ${CONF_DIR}/vars.mk
 
 LDSCRIPTS=-L. -L$(BASE)/ldscripts -T gcc.ld
 LFLAGS=$(USE_NANO) $(USE_SEMIHOST) $(LDSCRIPTS) $(GC) $(MAP)
@@ -70,7 +70,6 @@ build-tests: .build-tests-post
 .build-tests-post: .build-tests-impl
 # Add your post 'build-tests' code here...
 
-
 # run tests
 test: .test-post
 
@@ -91,19 +90,19 @@ help: .help-post
 # Add your post 'help' code here...
 
 # Build Targets
-${DISTDIR}/${CONF}/${PLATFORM}/lib${NAME}-${CORE}.a: ${OBJECTFILES}
+${DISTDIR}/lib${NAME}-${CORE}.a: ${OBJECTFILES}
 	${MKDIR} -p ${DISTDIR}/${CONF}/${XC_TARGET}
 	${LD} -o $@ ${OBJECTFILES} ${LFLAGS}
 
 ${OBJECTDIR}/rfa_core.o:
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	${CC} -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/rfa_core.o rfa_core.c
+	${CC} ${CFLAGS} -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/rfa_core.o rfa_core.c
 
 #
 # build step implementations
 #
-.build-impl: ${DISTDIR}/lib${NAME}-${CORE}.a
+.build-impl: ${DISTDIR}/lib${NAME}-${CPU_ARCH}.a
 	
 .clean-impl:
 	

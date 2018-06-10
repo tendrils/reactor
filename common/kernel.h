@@ -5,29 +5,30 @@
  */
 
 /* 
- * File:   sam_e70.h
+ * File:   kernel.h
  * Author: Tendril
  *
- * Created on May 21, 2018, 8:02 AM
+ * Created on June 10, 2018, 6:17 PM
  */
 
-#ifndef CHIP_SAME70_H
-#define CHIP_SAME70_H
+#ifndef KERNEL_H
+#define KERNEL_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#ifdef RFA_CHIP_MODEL_SAME70_Q21B
-#   define __SAME70Q21B__
-#   include "sam.h"
+#if (RFAPORT_KERNEL == RFAPORT_KERNEL_FREERTOS)
+#   include "kernel/freertos.h"
 #else
-#   error "No supported chip line selected"
+#   error "No task scheduler selected"
 #endif
+
+
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* CHIP_SAME70_H */
+#endif /* KERNEL_H */
 

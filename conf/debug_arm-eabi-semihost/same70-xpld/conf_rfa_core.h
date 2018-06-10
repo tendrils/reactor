@@ -23,12 +23,13 @@
 #define RFA_MODULE_COMPONENTS_MAX           4
 
 #define RFAPORT_KERNEL                      RFAPORT_KERNEL_FREERTOS
+#define RFAPORT_KERNEL_VERSION              RFAPORT_KERNEL_FREERTOS_10_0
 
 /* hardware platform configuration */
 
 #define RFA_CHIP_VENDOR                     RFA_CHIP_VENDOR_ATMEL
-#define RFA_CHIP_LINE                       RFA_CHIP_LINE_SAME70
-#define RFA_CHIP_MODEL                      RFA_CHIP_MODEL_SAME70_Q21B
+#define RFA_CHIP_LINE                       RFA_CHIP_LINE_ATMEL_SAME70
+#define RFA_CHIP_MODEL                      RFA_CHIP_MODEL_ATMEL_SAME70_Q21B
 
 #define RFA_BOARD                           RFA_BOARD_SAME70_XPLD
 

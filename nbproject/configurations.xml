@@ -4,8 +4,14 @@
     <df root="." name="0">
       <df name="common">
         <df name="board">
-          <in>same70-xpld.h</in>
+          <df name="atmel">
+            <in>same70-xpld.h</in>
+          </df>
         </df>
+        <df name="kernel">
+          <in>freertos.h</in>
+        </df>
+        <in>kernel.h</in>
       </df>
       <df name="lib">
         <df name="freertos-10.0.1">
@@ -429,12 +435,6 @@
           <in>tasks.c</in>
           <in>timers.c</in>
         </df>
-        <df name="startup">
-          <in>startup_ARMCM0.S</in>
-          <in>startup_ARMCM3.S</in>
-          <in>startup_ARMCM4.S</in>
-          <in>startup_ARMCM7.S</in>
-        </df>
       </df>
       <df name="module">
         <df name="rfa-core">
@@ -501,7 +501,11 @@
           <preBuildCommand></preBuildCommand>
         </preBuild>
       </makefileType>
-      <item path="common/board/same70-xpld.h" ex="false" tool="3" flavor2="0">
+      <item path="common/board/atmel/same70-xpld.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/kernel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common/kernel/freertos.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lib/freertos-10.0.1/croutine.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -1319,14 +1323,6 @@
       <item path="lib/freertos-10.0.1/tasks.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/freertos-10.0.1/timers.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="lib/startup/startup_ARMCM0.S" ex="false" tool="4" flavor2="0">
-      </item>
-      <item path="lib/startup/startup_ARMCM3.S" ex="false" tool="4" flavor2="0">
-      </item>
-      <item path="lib/startup/startup_ARMCM4.S" ex="false" tool="4" flavor2="0">
-      </item>
-      <item path="lib/startup/startup_ARMCM7.S" ex="false" tool="4" flavor2="0">
       </item>
       <item path="module/rfa-core/src/firmware.c" ex="false" tool="0" flavor2="0">
       </item>

@@ -14,8 +14,8 @@
 #ifndef CHIP_H
 #define CHIP_H
 
-#ifdef RFA_CHIP_LINE_SAME70
-#   include "chip/same70.h"
+#if (RFA_CHIP == RFA_CHIP_LINE_SAME70)
+#   include "chip/atmel/same70.h"
 #else
 #   error "No supported chip line selected"
 #endif

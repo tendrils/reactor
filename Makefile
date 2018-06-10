@@ -1,6 +1,11 @@
-subdirs=$(shell find . -mindepth 1 -maxdepth 1 -type d)
+modules=$(shell find ./module -mindepth 1 -maxdepth 1 -type d)
+testmodules=$(shell find ./test-module -mindepth 1 -maxdepth 1 -type d)
 all:
-	for d in $(subdirs); do make -C $$d || exit 1; done
+	echo "Building modules..."
+	for d in $(modules); do make -C $$d || exit 1; done
+	for d in $(testmodules); do make -C $$d || exit 1; done
 
 clean:
-	for d in $(subdirs); do make -C $$d $@; done
+	echo "Building test modules..."
+	for d in $(modules); do make -C $$d $@; done
+	for d in $(modules); do make -C $$d $@; done
