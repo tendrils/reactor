@@ -14,7 +14,12 @@
 #ifndef RFA_H
 #define RFA_H
 
+#include "rfa/defs.h"
+
 #include "conf_rfa_core.h"
+
+#include "chip.h"
+#include "board.h"
 
 // API return codes
 typedef enum api_result {

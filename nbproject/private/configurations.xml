@@ -2,6 +2,21 @@
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
+      <df name="common">
+        <df name="board">
+          <in>same70-xpld.h</in>
+        </df>
+        <df name="chip">
+          <df name="line">
+            <df name="sam_e70">
+              <in>q21.h</in>
+            </df>
+          </df>
+          <in>same70.h</in>
+        </df>
+        <in>board.h</in>
+        <in>chip.h</in>
+      </df>
       <df name="conf">
         <df name="debug_arm-eabi-semihost">
           <df name="same70-xpld">
@@ -11,6 +26,360 @@
         </df>
       </df>
       <df name="lib">
+        <df name="board">
+        </df>
+        <df name="chip">
+          <df name="SAME70_DFP">
+            <df name="2.2.91">
+              <df name="same70a">
+                <df name="atdf">
+                </df>
+                <df name="gcc">
+                  <df name="gcc">
+                    <in>startup_same70j19.c</in>
+                    <in>startup_same70j20.c</in>
+                    <in>startup_same70j21.c</in>
+                    <in>startup_same70n19.c</in>
+                    <in>startup_same70n20.c</in>
+                    <in>startup_same70n21.c</in>
+                    <in>startup_same70q19.c</in>
+                    <in>startup_same70q20.c</in>
+                    <in>startup_same70q21.c</in>
+                  </df>
+                  <in>system_same70j19.c</in>
+                  <in>system_same70j20.c</in>
+                  <in>system_same70j21.c</in>
+                  <in>system_same70n19.c</in>
+                  <in>system_same70n20.c</in>
+                  <in>system_same70n21.c</in>
+                  <in>system_same70q19.c</in>
+                  <in>system_same70q20.c</in>
+                  <in>system_same70q21.c</in>
+                </df>
+                <df name="include">
+                  <df name="component">
+                    <in>acc.h</in>
+                    <in>aes.h</in>
+                    <in>afec.h</in>
+                    <in>chipid.h</in>
+                    <in>dacc.h</in>
+                    <in>efc.h</in>
+                    <in>gmac.h</in>
+                    <in>gpbr.h</in>
+                    <in>hsmci.h</in>
+                    <in>icm.h</in>
+                    <in>isi.h</in>
+                    <in>matrix.h</in>
+                    <in>mcan.h</in>
+                    <in>pio.h</in>
+                    <in>pmc.h</in>
+                    <in>pwm.h</in>
+                    <in>qspi.h</in>
+                    <in>rstc.h</in>
+                    <in>rswdt.h</in>
+                    <in>rtc.h</in>
+                    <in>rtt.h</in>
+                    <in>sdramc.h</in>
+                    <in>smc.h</in>
+                    <in>spi.h</in>
+                    <in>ssc.h</in>
+                    <in>supc.h</in>
+                    <in>tc.h</in>
+                    <in>trng.h</in>
+                    <in>twihs.h</in>
+                    <in>uart.h</in>
+                    <in>usart.h</in>
+                    <in>usbhs.h</in>
+                    <in>utmi.h</in>
+                    <in>wdt.h</in>
+                    <in>xdmac.h</in>
+                  </df>
+                  <df name="instance">
+                    <in>acc.h</in>
+                    <in>aes.h</in>
+                    <in>afec0.h</in>
+                    <in>afec1.h</in>
+                    <in>chipid.h</in>
+                    <in>dacc.h</in>
+                    <in>efc.h</in>
+                    <in>gmac.h</in>
+                    <in>gpbr.h</in>
+                    <in>hsmci.h</in>
+                    <in>icm.h</in>
+                    <in>isi.h</in>
+                    <in>matrix.h</in>
+                    <in>mcan0.h</in>
+                    <in>mcan1.h</in>
+                    <in>pioa.h</in>
+                    <in>piob.h</in>
+                    <in>pioc.h</in>
+                    <in>piod.h</in>
+                    <in>pioe.h</in>
+                    <in>pmc.h</in>
+                    <in>pwm0.h</in>
+                    <in>pwm1.h</in>
+                    <in>qspi.h</in>
+                    <in>rstc.h</in>
+                    <in>rswdt.h</in>
+                    <in>rtc.h</in>
+                    <in>rtt.h</in>
+                    <in>sdramc.h</in>
+                    <in>smc.h</in>
+                    <in>spi0.h</in>
+                    <in>spi1.h</in>
+                    <in>ssc.h</in>
+                    <in>supc.h</in>
+                    <in>tc0.h</in>
+                    <in>tc1.h</in>
+                    <in>tc2.h</in>
+                    <in>tc3.h</in>
+                    <in>trng.h</in>
+                    <in>twihs0.h</in>
+                    <in>twihs1.h</in>
+                    <in>twihs2.h</in>
+                    <in>uart0.h</in>
+                    <in>uart1.h</in>
+                    <in>uart2.h</in>
+                    <in>uart3.h</in>
+                    <in>uart4.h</in>
+                    <in>usart0.h</in>
+                    <in>usart1.h</in>
+                    <in>usart2.h</in>
+                    <in>usbhs.h</in>
+                    <in>utmi.h</in>
+                    <in>wdt.h</in>
+                    <in>xdmac.h</in>
+                  </df>
+                  <df name="pio">
+                    <in>same70j19.h</in>
+                    <in>same70j20.h</in>
+                    <in>same70j21.h</in>
+                    <in>same70n19.h</in>
+                    <in>same70n20.h</in>
+                    <in>same70n21.h</in>
+                    <in>same70q19.h</in>
+                    <in>same70q20.h</in>
+                    <in>same70q21.h</in>
+                  </df>
+                  <in>component-version.h</in>
+                  <in>sam.h</in>
+                  <in>same70j19.h</in>
+                  <in>same70j20.h</in>
+                  <in>same70j21.h</in>
+                  <in>same70n19.h</in>
+                  <in>same70n20.h</in>
+                  <in>same70n21.h</in>
+                  <in>same70q19.h</in>
+                  <in>same70q20.h</in>
+                  <in>same70q21.h</in>
+                  <in>system_same70.h</in>
+                </df>
+                <df name="templates">
+                  <in>library.c</in>
+                  <in>library.cpp</in>
+                  <in>main.c</in>
+                  <in>main.cpp</in>
+                </df>
+              </df>
+              <df name="same70b">
+                <df name="atdf">
+                </df>
+                <df name="gcc">
+                  <df name="gcc">
+                    <in>startup_same70j19b.c</in>
+                    <in>startup_same70j20b.c</in>
+                    <in>startup_same70j21b.c</in>
+                    <in>startup_same70n19b.c</in>
+                    <in>startup_same70n20b.c</in>
+                    <in>startup_same70n21b.c</in>
+                    <in>startup_same70q19b.c</in>
+                    <in>startup_same70q20b.c</in>
+                    <in>startup_same70q21b.c</in>
+                  </df>
+                  <in>system_same70j19b.c</in>
+                  <in>system_same70j20b.c</in>
+                  <in>system_same70j21b.c</in>
+                  <in>system_same70n19b.c</in>
+                  <in>system_same70n20b.c</in>
+                  <in>system_same70n21b.c</in>
+                  <in>system_same70q19b.c</in>
+                  <in>system_same70q20b.c</in>
+                  <in>system_same70q21b.c</in>
+                </df>
+                <df name="include">
+                  <df name="component">
+                    <in>acc.h</in>
+                    <in>aes.h</in>
+                    <in>afec.h</in>
+                    <in>chipid.h</in>
+                    <in>dacc.h</in>
+                    <in>efc.h</in>
+                    <in>gmac.h</in>
+                    <in>gpbr.h</in>
+                    <in>hsmci.h</in>
+                    <in>i2sc.h</in>
+                    <in>icm.h</in>
+                    <in>isi.h</in>
+                    <in>matrix.h</in>
+                    <in>mcan.h</in>
+                    <in>pio.h</in>
+                    <in>pmc.h</in>
+                    <in>pwm.h</in>
+                    <in>qspi.h</in>
+                    <in>rstc.h</in>
+                    <in>rswdt.h</in>
+                    <in>rtc.h</in>
+                    <in>rtt.h</in>
+                    <in>sdramc.h</in>
+                    <in>smc.h</in>
+                    <in>spi.h</in>
+                    <in>ssc.h</in>
+                    <in>supc.h</in>
+                    <in>tc.h</in>
+                    <in>trng.h</in>
+                    <in>twihs.h</in>
+                    <in>uart.h</in>
+                    <in>usart.h</in>
+                    <in>usbhs.h</in>
+                    <in>utmi.h</in>
+                    <in>wdt.h</in>
+                    <in>xdmac.h</in>
+                  </df>
+                  <df name="instance">
+                    <in>acc.h</in>
+                    <in>aes.h</in>
+                    <in>afec0.h</in>
+                    <in>afec1.h</in>
+                    <in>chipid.h</in>
+                    <in>dacc.h</in>
+                    <in>efc.h</in>
+                    <in>gmac.h</in>
+                    <in>gpbr.h</in>
+                    <in>hsmci.h</in>
+                    <in>i2sc0.h</in>
+                    <in>i2sc1.h</in>
+                    <in>icm.h</in>
+                    <in>isi.h</in>
+                    <in>matrix.h</in>
+                    <in>mcan0.h</in>
+                    <in>mcan1.h</in>
+                    <in>pioa.h</in>
+                    <in>piob.h</in>
+                    <in>pioc.h</in>
+                    <in>piod.h</in>
+                    <in>pioe.h</in>
+                    <in>pmc.h</in>
+                    <in>pwm0.h</in>
+                    <in>pwm1.h</in>
+                    <in>qspi.h</in>
+                    <in>rstc.h</in>
+                    <in>rswdt.h</in>
+                    <in>rtc.h</in>
+                    <in>rtt.h</in>
+                    <in>sdramc.h</in>
+                    <in>smc.h</in>
+                    <in>spi0.h</in>
+                    <in>spi1.h</in>
+                    <in>ssc.h</in>
+                    <in>supc.h</in>
+                    <in>tc0.h</in>
+                    <in>tc1.h</in>
+                    <in>tc2.h</in>
+                    <in>tc3.h</in>
+                    <in>trng.h</in>
+                    <in>twihs0.h</in>
+                    <in>twihs1.h</in>
+                    <in>twihs2.h</in>
+                    <in>uart0.h</in>
+                    <in>uart1.h</in>
+                    <in>uart2.h</in>
+                    <in>uart3.h</in>
+                    <in>uart4.h</in>
+                    <in>usart0.h</in>
+                    <in>usart1.h</in>
+                    <in>usart2.h</in>
+                    <in>usbhs.h</in>
+                    <in>utmi.h</in>
+                    <in>wdt.h</in>
+                    <in>xdmac.h</in>
+                  </df>
+                  <df name="pio">
+                    <in>same70j19b.h</in>
+                    <in>same70j20b.h</in>
+                    <in>same70j21b.h</in>
+                    <in>same70n19b.h</in>
+                    <in>same70n20b.h</in>
+                    <in>same70n21b.h</in>
+                    <in>same70q19b.h</in>
+                    <in>same70q20b.h</in>
+                    <in>same70q21b.h</in>
+                  </df>
+                  <in>component-version.h</in>
+                  <in>sam.h</in>
+                  <in>same70j19b.h</in>
+                  <in>same70j20b.h</in>
+                  <in>same70j21b.h</in>
+                  <in>same70n19b.h</in>
+                  <in>same70n20b.h</in>
+                  <in>same70n21b.h</in>
+                  <in>same70q19b.h</in>
+                  <in>same70q20b.h</in>
+                  <in>same70q21b.h</in>
+                  <in>system_same70.h</in>
+                </df>
+                <df name="templates">
+                  <in>library.c</in>
+                  <in>library.cpp</in>
+                  <in>main.c</in>
+                  <in>main.cpp</in>
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="cmsis">
+          <df name="5.0.1">
+            <df name="CMSIS">
+              <df name="Core">
+                <df name="Template">
+                  <df name="ARMv8-M">
+                    <in>main_s.c</in>
+                    <in>tz_context.c</in>
+                  </df>
+                </df>
+              </df>
+              <df name="Documentation">
+                <df name="Core">
+                  <df name="html">
+                    <df name="search">
+                    </df>
+                  </df>
+                </df>
+              </df>
+              <df name="Include">
+                <in>arm_common_tables.h</in>
+                <in>arm_const_structs.h</in>
+                <in>arm_math.h</in>
+                <in>cmsis_armcc.h</in>
+                <in>cmsis_armclang.h</in>
+                <in>cmsis_compiler.h</in>
+                <in>cmsis_gcc.h</in>
+                <in>core_armv8mbl.h</in>
+                <in>core_armv8mml.h</in>
+                <in>core_cm0.h</in>
+                <in>core_cm0plus.h</in>
+                <in>core_cm23.h</in>
+                <in>core_cm3.h</in>
+                <in>core_cm33.h</in>
+                <in>core_cm4.h</in>
+                <in>core_cm7.h</in>
+                <in>core_sc000.h</in>
+                <in>core_sc300.h</in>
+                <in>tz_context.h</in>
+              </df>
+            </df>
+          </df>
+        </df>
         <df name="freertos-10.0.1">
           <df name="include">
             <in>FreeRTOS.h</in>
@@ -595,10 +964,18 @@
         <df name="ldscripts">
         </df>
         <df name="startup">
+          <df name="cortex-m">
+            <in>startup_ARMCM0.S</in>
+            <in>startup_ARMCM3.S</in>
+            <in>startup_ARMCM4.S</in>
+            <in>startup_ARMCM7.S</in>
+          </df>
           <in>startup_ARMCM0.S</in>
           <in>startup_ARMCM3.S</in>
           <in>startup_ARMCM4.S</in>
           <in>startup_ARMCM7.S</in>
+          <in>startup_same70q21.c</in>
+          <in>system_same70q21.c</in>
         </df>
       </df>
       <df name="module">
@@ -609,6 +986,7 @@
                 <in>lifecycle_manager.h</in>
               </df>
               <in>component.h</in>
+              <in>defs.h</in>
               <in>firmware.h</in>
               <in>kernel.h</in>
               <in>message_bus.h</in>
@@ -620,6 +998,11 @@
           <df name="obj">
           </df>
           <df name="src">
+            <df name="port">
+              <df name="freertos-10">
+              </df>
+              <in>kernel_freertos-10.c</in>
+            </df>
             <in>firmware.c</in>
             <in>firmware_internal.h</in>
             <in>kernel.c</in>
@@ -628,6 +1011,7 @@
             <in>message_bus_internal.h</in>
             <in>module.c</in>
             <in>module_internal.h</in>
+            <in>port.h</in>
             <in>rfa_core.c</in>
           </df>
         </df>

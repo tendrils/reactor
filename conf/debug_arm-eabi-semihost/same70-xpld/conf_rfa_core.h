@@ -14,13 +14,23 @@
 #ifndef CONF_RFA_CORE_H
 #define CONF_RFA_CORE_H
 
+/* software platform configuration */
+
 #define RFA_FIRMWARE_MODULES_MAX            4
 #define RFA_FIRMWARE_COMPONENTS_MAX         16
 #define RFA_FIRMWARE_SERVICES_MAX           16
 
 #define RFA_MODULE_COMPONENTS_MAX           4
 
-#define RFA_KERNEL_FREERTOS
+#define RFAPORT_KERNEL                      RFAPORT_KERNEL_FREERTOS
+
+/* hardware platform configuration */
+
+#define RFA_CHIP_VENDOR                     RFA_CHIP_VENDOR_ATMEL
+#define RFA_CHIP_LINE                       RFA_CHIP_LINE_SAME70
+#define RFA_CHIP_MODEL                      RFA_CHIP_MODEL_SAME70_Q21B
+
+#define RFA_BOARD                           RFA_BOARD_SAME70_XPLD
 
 #endif /* CONF_RFA_CORE_H */
 

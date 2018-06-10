@@ -7,6 +7,7 @@
           <in>lifecycle_manager.h</in>
         </df>
         <in>component.h</in>
+        <in>defs.h</in>
         <in>firmware.h</in>
         <in>kernel.h</in>
         <in>message_bus.h</in>
@@ -16,6 +17,11 @@
       <in>rfa.h</in>
     </df>
     <df root="src" name="1">
+      <df name="port">
+        <df name="freertos-10">
+        </df>
+        <in>kernel_freertos-10.c</in>
+      </df>
       <in>firmware.c</in>
       <in>firmware_internal.h</in>
       <in>kernel.c</in>
@@ -24,6 +30,7 @@
       <in>message_bus_internal.h</in>
       <in>module.c</in>
       <in>module_internal.h</in>
+      <in>port.h</in>
       <in>rfa_core.c</in>
     </df>
   </logicalFolder>

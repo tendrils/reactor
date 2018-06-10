@@ -28,3 +28,19 @@ rfa_result_t rfa_firmware_module_define(firmware_t *app, module_t *module)
         }
     return RFA_RES_FAIL;
     }
+
+uint8_t rfa_firmware_module_count(firmware_t *app) {
+    return app->module_count;
+    }
+
+module_t* rfa_firmware_module_get(firmware_t *app, uint8_t idx) {
+    return app->modules[idx];
+    }
+
+uint8_t rfa_firmware_service_count(firmware_t *app) {
+    return app->service_count;
+    }
+
+service_t* rfa_firmware_service_get(firmware_t *app, uint8_t idx) {
+    return app->services[idx];
+    }

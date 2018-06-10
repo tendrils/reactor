@@ -2,6 +2,11 @@
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
+      <df name="common">
+        <df name="board">
+          <in>same70-xpld.h</in>
+        </df>
+      </df>
       <df name="lib">
         <df name="freertos-10.0.1">
           <df name="portable">
@@ -480,7 +485,9 @@
           <executablePath></executablePath>
           <cTool>
             <incDir>
-              <pElem>.</pElem>
+              <pElem>lib/chip/SAME70_DFP/2.2.91/same70b/include</pElem>
+              <pElem>common</pElem>
+              <pElem>conf/debug_arm-eabi-semihost/same70-xpld</pElem>
             </incDir>
           </cTool>
           <ccTool>
@@ -494,6 +501,8 @@
           <preBuildCommand></preBuildCommand>
         </preBuild>
       </makefileType>
+      <item path="common/board/same70-xpld.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="lib/freertos-10.0.1/croutine.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/freertos-10.0.1/event_groups.c" ex="false" tool="0" flavor2="0">

@@ -5,7 +5,7 @@
  */
 
 /* 
- * File:   firmware_internal.h
+ * File:   kernel_internal.h
  * Author: Tendril
  *
  * Created on March 27, 2018, 11:39 PM

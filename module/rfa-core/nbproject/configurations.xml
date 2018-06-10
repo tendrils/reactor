@@ -3,6 +3,7 @@
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="include" name="0">
       <df name="rfa">
+        <in>defs.h</in>
         <in>kernel.h</in>
         <in>message_bus.h</in>
       </df>
@@ -17,6 +18,7 @@
       <in>message_bus_internal.h</in>
       <in>module.c</in>
       <in>module_internal.h</in>
+      <in>port.h</in>
     </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -52,6 +54,14 @@
             <incDir>
               <pElem>../../lib/freertos-10.0.1/include</pElem>
               <pElem>../../conf/debug_arm-eabi-semihost/same70-xpld</pElem>
+              <pElem>../../lib/hal/include</pElem>
+              <pElem>../../lib/hal/utils/include</pElem>
+              <pElem>../../lib/hpl/core</pElem>
+              <pElem>../../lib/hpl/pio</pElem>
+              <pElem>../../lib/hpl/pmc</pElem>
+              <pElem>../../lib/hpl/xdmac</pElem>
+              <pElem>../../lib/hri</pElem>
+              <pElem>../../lib/chip/SAME70_DFP/2.2.91/same70b/include</pElem>
             </incDir>
             <preprocessorList>
               <Elem>BOARD=same70-xpld</Elem>
@@ -65,6 +75,8 @@
         </preBuild>
       </makefileType>
       <item path="include/rfa.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/rfa/defs.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/rfa/kernel.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -85,6 +97,8 @@
       <item path="src/module.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="src/module_internal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/port.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
