@@ -14,18 +14,17 @@
 #ifndef RFA_H
 #define RFA_H
 
-#include "rfa/defs.h"
+#include <stdlib.h>
 
-#include "conf_rfa_core.h"
+#include <rfa/defs.h>
+#include <conf_rfa_core.h>
 
-#include "chip.h"
-#include "board.h"
-#include "kernel.h"
+#include <rfa_platform.h>
 
 // API return codes
 typedef enum api_result {
-	RFA_RES_OK,
-	RFA_RES_FAIL
+    RFA_RES_OK,
+    RFA_RES_FAIL
 } rfa_result_t;
 
 // core firmware-architecture types
@@ -41,9 +40,14 @@ typedef struct message_lane message_lane_t;
 typedef struct control_bus control_bus_t;
 
 // RTOS kernel abstraction
-typedef const struct kernel_if kernel_if_t;
 typedef os_queue_t;
 typedef os_heap_t;
 typedef os_task_t;
+
+typedef enum scheduler_state {
+    RFA_SCHEDULER_INIT,
+    RFA_SCHEDULER_RUN,
+    RFA_SCHEDULER_PAUSE
+} rfa_scheduler_state_t;
 
 #endif /* RFA_H */

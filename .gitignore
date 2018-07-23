@@ -1,8 +1,6 @@
 nbproject/private
 
-**/build/
-**/nbproject/private
+module/*/build/*
+module/*/nbproject/private
 
-# avoid committing nonessential parts of support packages
-**/CMSIS/Core
-**/CMSIS/Documentation
+lib/chip/*/*/dfp/*

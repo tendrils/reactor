@@ -1,0 +1,13 @@
+PLATFORM_INCLUDES+=$(BOARD_DIR) $(CHIP_DIR) $(CORE_DIR) $(KERNEL_DIR)
+
+BOARD_DIR=$(PLATFORM_DIR)/board/$(BOARD_VENDOR)/$(BOARD)
+
+include $(BOARD_DIR)/board.mk
+
+CHIP_DIR=$(PLATFORM_DIR)/chip/$(CHIP_VENDOR)/$(CHIP)
+
+include $(CHIP_DIR)/chip.mk
+
+KERNEL_DIR=$(PLATFORM_DIR)/kernel/$(KERNEL)/$(KERNEL_VERSION)
+
+include $(KERNEL_DIR)/kernel.mk

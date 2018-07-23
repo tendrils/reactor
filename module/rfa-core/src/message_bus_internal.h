@@ -20,4 +20,3 @@ struct message_bus {
 };
 
 #endif /* MESSAGE_BUS_INTERNAL_H */
-

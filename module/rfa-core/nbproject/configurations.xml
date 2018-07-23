@@ -37,7 +37,7 @@
   <confs>
     <conf name="debug_arm-eabi-semihost_same70xpld" type="0">
       <toolsSet>
-        <compilerSet>default</compilerSet>
+        <compilerSet>arm-none-eabi-5.4.1|GNU</compilerSet>
         <dependencyChecking>false</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
@@ -52,16 +52,21 @@
           <cTool>
             <standard>10</standard>
             <incDir>
-              <pElem>../../lib/freertos-10.0.1/include</pElem>
-              <pElem>../../conf/debug_arm-eabi-semihost/same70-xpld</pElem>
-              <pElem>../../lib/hal/include</pElem>
-              <pElem>../../lib/hal/utils/include</pElem>
-              <pElem>../../lib/hpl/core</pElem>
-              <pElem>../../lib/hpl/pio</pElem>
-              <pElem>../../lib/hpl/pmc</pElem>
-              <pElem>../../lib/hpl/xdmac</pElem>
-              <pElem>../../lib/hri</pElem>
-              <pElem>../../lib/chip/SAME70_DFP/2.2.91/same70b/include</pElem>
+              <pElem>include</pElem>
+              <pElem>../../lib/core/arm/cmsis-5.0.1</pElem>
+              <pElem>../../lib/chip/atmel/same70/dfp/2.3.98/same70b/include</pElem>
+              <pElem>../../lib/chip/atmel/same70/hal/include</pElem>
+              <pElem>../../lib/chip/atmel/same70/hpl/core</pElem>
+              <pElem>../../lib/chip/atmel/same70/hpl/pio</pElem>
+              <pElem>../../lib/chip/atmel/same70/hpl/pmc</pElem>
+              <pElem>../../lib/chip/atmel/same70/hpl/usbhs</pElem>
+              <pElem>../../lib/chip/atmel/same70/hpl/xdmac</pElem>
+              <pElem>../../lib/chip/atmel/same70/hri</pElem>
+              <pElem>../../conf/debug_arm-eabi-semihost</pElem>
+              <pElem>../../platform</pElem>
+              <pElem>../../platform/board/atmel/same70-xpld</pElem>
+              <pElem>../../platform/chip/atmel/same70</pElem>
+              <pElem>../../platform/kernel/freertos/10.0.1</pElem>
             </incDir>
             <preprocessorList>
               <Elem>BOARD=same70-xpld</Elem>

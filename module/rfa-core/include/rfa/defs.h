@@ -23,6 +23,7 @@ extern "C"
 #define RFAPORT_KERNEL_NONE                     0
 #define RFAPORT_KERNEL_FREERTOS                 1
 #define RFAPORT_KERNEL_EMBLINUX                 2
+#define RFAPORT_KERNEL_RTX5                     3
 
 /* chip vendor values */
 #define RFA_CHIP_VENDOR_ATMEL                   0

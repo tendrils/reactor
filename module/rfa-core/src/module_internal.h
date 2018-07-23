@@ -10,8 +10,8 @@
  *
  */
 
-#ifndef MODULE_INTERNAL_H
-#define MODULE_INTERNAL_H
+#ifndef COMPONENT_INTERNAL_H
+#define COMPONENT_INTERNAL_H
 
 struct module {
     uint8_t component_count;

@@ -15,7 +15,7 @@
 #define RFA_SERVICE_H
 
 #ifndef RFA_H
-#   error "RFA_H must be included before" __FILE__
+#   error "RFA_H must be included before " __FILE__
 #endif
 
 size_t rfa_service_size(void);

@@ -11,19 +11,21 @@
  * Created on March 24, 2018, 12:35 PM
  */
 
-#ifndef RFA_LIFECYCLE_MANAGER_H
-#define RFA_LIFECYCLE_MANAGER_H
+#ifndef RFA_CMP_LIFECYCLE_MANAGER_H
+#define RFA_CMP_LIFECYCLE_MANAGER_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-
-
+    const struct component _desc_lifecycle =
+    {
+        
+    };
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* RFA_LIFECYCLE_MANAGER_H */
+#endif /* RFA_CMP_LIFECYCLE_MANAGER_H */
 

@@ -4,10 +4,14 @@
  * and open the template in the editor.
  */
 
-#include "rfa.h"
-#include "rfa/firmware.h"
+#include <rfa.h>
+#include <rfa/firmware.h>
 #include "firmware_internal.h"
 #include "module_internal.h"
+
+firmware_t* rfa_firmware_root() {
+    return _rootfw;
+}
 
 size_t rfa_firmware_size(void)
     {
@@ -44,3 +48,13 @@ uint8_t rfa_firmware_service_count(firmware_t *app) {
 service_t* rfa_firmware_service_get(firmware_t *app, uint8_t idx) {
     return app->services[idx];
     }
+
+// initialize services + subsystems
+rfa_result_t rfa_firmware_load(firmware_t *firmware) {
+    return RFA_RES_OK;
+}
+
+// start message queues, pass control to scheduler/runloop
+rfa_result_t rfa_firmware_run(firmware_t *firmware) {
+    return RFA_RES_OK;
+}
