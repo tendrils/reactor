@@ -40,7 +40,7 @@
     </conf>
     <conf name="Debug__VM_build" type="0">
       <toolsSet>
-        <compilerSet>default</compilerSet>
+        <compilerSet>arm-none-eabi-gcc|GNU</compilerSet>
         <dependencyChecking>false</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>

@@ -2,19 +2,62 @@
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
+      <df name="lib">
+        <df name="chip">
+          <df name="atmel">
+            <df name="same70">
+              <df name="hal">
+                <df name="src">
+                  <in>hal_atomic.c</in>
+                  <in>hal_delay.c</in>
+                  <in>hal_gpio.c</in>
+                  <in>hal_init.c</in>
+                  <in>hal_io.c</in>
+                  <in>hal_sleep.c</in>
+                </df>
+                <df name="utils">
+                  <df name="src">
+                    <in>utils_assert.c</in>
+                    <in>utils_event.c</in>
+                    <in>utils_list.c</in>
+                    <in>utils_syscalls.c</in>
+                  </df>
+                </df>
+              </df>
+              <df name="hpl">
+                <df name="core">
+                  <in>hpl_core_m7_base.c</in>
+                  <in>hpl_init.c</in>
+                </df>
+                <df name="pmc">
+                  <in>hpl_pmc.c</in>
+                  <in>hpl_sleep.c</in>
+                </df>
+                <df name="xdmac">
+                  <in>hpl_xdmac.c</in>
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+      </df>
       <df name="module">
-        <df name="rfa-core">
+        <df name="reactor-core">
           <df name="src">
-            <in>firmware.c</in>
-            <in>kernel.c</in>
-            <in>message_bus.c</in>
-            <in>module.c</in>
-            <in>rfa_core.c</in>
+            <in>platform.c</in>
+            <in>reactor_core.c</in>
           </df>
         </df>
       </df>
       <df name="platform">
-        <in>rfa_platform.h</in>
+        <df name="board">
+          <df name="atmel">
+            <df name="same70-xpld">
+              <in>startup.c</in>
+              <in>system.c</in>
+            </df>
+          </df>
+        </df>
       </df>
       <df name="test-module">
         <df name="rfa-core-test">
@@ -40,12 +83,12 @@
   <confs>
     <conf name="Default" type="0">
       <toolsSet>
-        <compilerSet>GNU|GNU</compilerSet>
+        <compilerSet>arm-none-eabi-gcc|GNU</compilerSet>
         <dependencyChecking>false</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <flagsDictionary>
-        <element flagsID="0" commonFlags="-Os -g"/>
+        <element flagsID="0" commonFlags="-Os -ffreestanding"/>
       </flagsDictionary>
       <codeAssistance>
       </codeAssistance>
@@ -61,6 +104,90 @@
           <preBuildCommand></preBuildCommand>
         </preBuild>
       </makefileType>
+      <folder path="0/lib">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>conf/debug_arm-eabi-semihost</pElem>
+            <pElem>platform</pElem>
+            <pElem>platform/board/atmel/same70-xpld</pElem>
+            <pElem>platform/chip/atmel/same70</pElem>
+            <pElem>platform/core/arm/armv7-m</pElem>
+            <pElem>platform/kernel/freertos/10.0.1</pElem>
+            <pElem>lib/core/arm/cmsis-5.0.1</pElem>
+            <pElem>lib/chip/atmel/same70/dfp/2.3.98/same70b/include</pElem>
+            <pElem>lib/chip/atmel/same70/hri</pElem>
+            <pElem>lib/chip/atmel/same70/hpl/core</pElem>
+            <pElem>lib/chip/atmel/same70/hpl/pmc</pElem>
+            <pElem>lib/chip/atmel/same70/hpl/pio</pElem>
+            <pElem>lib/chip/atmel/same70/hpl/xdmac</pElem>
+            <pElem>lib/chip/atmel/same70/hal/include</pElem>
+            <pElem>lib/chip/atmel/same70/hal/utils/include</pElem>
+            <pElem>lib/kernel/freertos/10.0.1/include</pElem>
+            <pElem>lib/kernel/freertos/10.0.1/portable/GCC/ARM_CM7/r0p1</pElem>
+            <pElem></pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__SAME70Q21B__</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/module">
+        <cTool>
+          <incDir>
+            <pElem>module/reactor-core/include</pElem>
+            <pElem>conf/debug_arm-eabi-semihost</pElem>
+            <pElem>platform</pElem>
+            <pElem>platform/board/atmel/same70-xpld</pElem>
+            <pElem>platform/chip/atmel/same70</pElem>
+            <pElem>platform/core/arm/armv7-m</pElem>
+            <pElem>platform/kernel/freertos/10.0.1</pElem>
+            <pElem>lib/core/arm/cmsis-5.0.1</pElem>
+            <pElem>lib/chip/atmel/same70/dfp/2.3.98/same70b/include</pElem>
+            <pElem>lib/chip/atmel/same70/hri</pElem>
+            <pElem>lib/chip/atmel/same70/hpl/core</pElem>
+            <pElem>lib/chip/atmel/same70/hpl/pmc</pElem>
+            <pElem>lib/chip/atmel/same70/hpl/pio</pElem>
+            <pElem>lib/chip/atmel/same70/hpl/xdmac</pElem>
+            <pElem>lib/chip/atmel/same70/hal/include</pElem>
+            <pElem>lib/chip/atmel/same70/hal/utils/include</pElem>
+            <pElem>lib/kernel/freertos/10.0.1/include</pElem>
+            <pElem>lib/kernel/freertos/10.0.1/portable/GCC/ARM_CM7/r0p1</pElem>
+            <pElem>module/reactor-core</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__SAME70Q21B__</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/platform">
+        <cTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>conf/debug_arm-eabi-semihost</pElem>
+            <pElem>platform</pElem>
+            <pElem>platform/board/atmel/same70-xpld</pElem>
+            <pElem>platform/chip/atmel/same70</pElem>
+            <pElem>platform/core/arm/armv7-m</pElem>
+            <pElem>platform/kernel/freertos/10.0.1</pElem>
+            <pElem>lib/core/arm/cmsis-5.0.1</pElem>
+            <pElem>lib/chip/atmel/same70/dfp/2.3.98/same70b/include</pElem>
+            <pElem>lib/chip/atmel/same70/hri</pElem>
+            <pElem>lib/chip/atmel/same70/hpl/core</pElem>
+            <pElem>lib/chip/atmel/same70/hpl/pmc</pElem>
+            <pElem>lib/chip/atmel/same70/hpl/pio</pElem>
+            <pElem>lib/chip/atmel/same70/hpl/xdmac</pElem>
+            <pElem>lib/chip/atmel/same70/hal/include</pElem>
+            <pElem>lib/chip/atmel/same70/hal/utils/include</pElem>
+            <pElem>lib/kernel/freertos/10.0.1/include</pElem>
+            <pElem>lib/kernel/freertos/10.0.1/portable/GCC/ARM_CM7/r0p1</pElem>
+            <pElem></pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__SAME70Q21B__</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
       <folder path="0/test-module">
         <cTool>
           <incDir>
@@ -70,53 +197,135 @@
           </incDir>
         </cTool>
       </folder>
-      <item path="module/rfa-core/src/firmware.c" ex="false" tool="0" flavor2="2">
-        <cTool>
-          <incDir>
-            <pElem>lib/chip/SAME70_DFP/2.2.91/same70b/include</pElem>
-            <pElem>common</pElem>
-            <pElem>conf/debug_arm-eabi-semihost/same70-xpld</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="module/rfa-core/src/kernel.c" ex="false" tool="0" flavor2="2">
-        <cTool>
-          <incDir>
-            <pElem>lib/chip/SAME70_DFP/2.2.91/same70b/include</pElem>
-            <pElem>common</pElem>
-            <pElem>conf/debug_arm-eabi-semihost/same70-xpld</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="module/rfa-core/src/message_bus.c" ex="false" tool="0" flavor2="2">
-        <cTool>
-          <incDir>
-            <pElem>lib/chip/SAME70_DFP/2.2.91/same70b/include</pElem>
-            <pElem>common</pElem>
-            <pElem>conf/debug_arm-eabi-semihost/same70-xpld</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="module/rfa-core/src/module.c" ex="false" tool="0" flavor2="2">
-        <cTool>
-          <incDir>
-            <pElem>lib/chip/SAME70_DFP/2.2.91/same70b/include</pElem>
-            <pElem>common</pElem>
-            <pElem>conf/debug_arm-eabi-semihost/same70-xpld</pElem>
-          </incDir>
-        </cTool>
-      </item>
-      <item path="module/rfa-core/src/rfa_core.c" ex="false" tool="0" flavor2="0">
+      <item path="lib/chip/atmel/same70/hal/src/hal_atomic.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
         <cTool flags="0">
-          <incDir>
-            <pElem>module/rfa-core</pElem>
-          </incDir>
-          <preprocessorList>
-            <Elem>__NO_SYSTEM_INIT</Elem>
-          </preprocessorList>
         </cTool>
       </item>
-      <item path="platform/rfa_platform.h" ex="false" tool="3" flavor2="0">
+      <item path="lib/chip/atmel/same70/hal/src/hal_delay.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="lib/chip/atmel/same70/hal/src/hal_gpio.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="lib/chip/atmel/same70/hal/src/hal_init.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="lib/chip/atmel/same70/hal/src/hal_io.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="lib/chip/atmel/same70/hal/src/hal_sleep.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="lib/chip/atmel/same70/hal/utils/src/utils_assert.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="lib/chip/atmel/same70/hal/utils/src/utils_event.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="lib/chip/atmel/same70/hal/utils/src/utils_list.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="lib/chip/atmel/same70/hal/utils/src/utils_syscalls.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="lib/chip/atmel/same70/hpl/core/hpl_core_m7_base.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="lib/chip/atmel/same70/hpl/core/hpl_init.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="lib/chip/atmel/same70/hpl/pmc/hpl_pmc.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="lib/chip/atmel/same70/hpl/pmc/hpl_sleep.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="lib/chip/atmel/same70/hpl/xdmac/hpl_xdmac.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="module/reactor-core/src/platform.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="module/reactor-core/src/reactor_core.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="platform/board/atmel/same70-xpld/startup.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="platform/board/atmel/same70-xpld/system.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool flags="0">
+        </cTool>
       </item>
       <item path="test-module/rfa-core-test/src/rfa_core_test.c"
             ex="false"

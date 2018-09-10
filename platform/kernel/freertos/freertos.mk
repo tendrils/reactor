@@ -16,3 +16,4 @@ KERNEL_INCLUDES=-I$(K_INCLUDE) -I$(K_PORT_INCLUDE)
 KERNEL_FLAGS=
 
 # TODO add compilation rules and dependency lists
+KERNEL_OBJECTS+=platform_freertos.o

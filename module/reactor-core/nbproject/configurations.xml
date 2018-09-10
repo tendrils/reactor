@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="include" name="0">
+    </df>
+    <df root="src" name="1">
+      <df name="component">
+        <in>lifecycle.c</in>
+      </df>
+      <in>component.c</in>
+      <in>firmware.c</in>
+      <in>message_bus.c</in>
+      <in>module.c</in>
+      <in>platform.c</in>
+      <in>reactor_core.c</in>
+      <in>runtime.c</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>src</Elem>
+    <Elem>include</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="debug_arm-eabi-semihost_same70xpld" type="0">
+      <toolsSet>
+        <compilerSet>arm-none-eabi-gcc|GNU</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-Os -nostdlib"/>
+        <element flagsID="1" commonFlags="-std=c11"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE}</buildCommand>
+          <cleanCommand>${MAKE} clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <standard>10</standard>
+          </cTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="src/component.c" ex="false" tool="0" flavor2="10">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/component/lifecycle.c" ex="false" tool="0" flavor2="10">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/firmware.c" ex="false" tool="0" flavor2="10">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/message_bus.c" ex="false" tool="0" flavor2="10">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/module.c" ex="false" tool="0" flavor2="10">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/platform.c" ex="false" tool="0" flavor2="10">
+        <cTool flags="0">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>../../conf/debug_arm-eabi-semihost</pElem>
+            <pElem>../../platform</pElem>
+            <pElem>../../platform/board/atmel/same70-xpld</pElem>
+            <pElem>../../platform/chip/atmel/same70</pElem>
+            <pElem>../../platform/core/arm/armv7-m</pElem>
+            <pElem>../../platform/kernel/freertos/10.0.1</pElem>
+            <pElem>../../lib/core/arm/cmsis-5.0.1</pElem>
+            <pElem>../../lib/chip/atmel/same70/dfp/2.3.98/same70b/include</pElem>
+            <pElem>../../lib/chip/atmel/same70/hri</pElem>
+            <pElem>../../lib/chip/atmel/same70/hpl/core</pElem>
+            <pElem>../../lib/chip/atmel/same70/hpl/pmc</pElem>
+            <pElem>../../lib/chip/atmel/same70/hpl/pio</pElem>
+            <pElem>../../lib/chip/atmel/same70/hpl/xdmac</pElem>
+            <pElem>../../lib/chip/atmel/same70/hal/include</pElem>
+            <pElem>../../lib/chip/atmel/same70/hal/utils/include</pElem>
+            <pElem>../../lib/kernel/freertos/10.0.1/include</pElem>
+            <pElem>../../lib/kernel/freertos/10.0.1/portable/GCC/ARM_CM7/r0p1</pElem>
+            <pElem></pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__SAME70Q21B__</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/reactor_core.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>../../conf/debug_arm-eabi-semihost</pElem>
+            <pElem>../../platform</pElem>
+            <pElem>../../platform/board/atmel/same70-xpld</pElem>
+            <pElem>../../platform/chip/atmel/same70</pElem>
+            <pElem>../../platform/core/arm/armv7-m</pElem>
+            <pElem>../../platform/kernel/freertos/10.0.1</pElem>
+            <pElem>../../lib/core/arm/cmsis-5.0.1</pElem>
+            <pElem>../../lib/chip/atmel/same70/dfp/2.3.98/same70b/include</pElem>
+            <pElem>../../lib/chip/atmel/same70/hri</pElem>
+            <pElem>../../lib/chip/atmel/same70/hpl/core</pElem>
+            <pElem>../../lib/chip/atmel/same70/hpl/pmc</pElem>
+            <pElem>../../lib/chip/atmel/same70/hpl/pio</pElem>
+            <pElem>../../lib/chip/atmel/same70/hpl/xdmac</pElem>
+            <pElem>../../lib/chip/atmel/same70/hal/include</pElem>
+            <pElem>../../lib/chip/atmel/same70/hal/utils/include</pElem>
+            <pElem>../../lib/kernel/freertos/10.0.1/include</pElem>
+            <pElem>../../lib/kernel/freertos/10.0.1/portable/GCC/ARM_CM7/r0p1</pElem>
+            <pElem></pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__SAME70Q21B__</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+    </conf>
+    <conf name="test" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-Os -nostdlib"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE}</buildCommand>
+          <cleanCommand>${MAKE} clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="src/component.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/component/lifecycle.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/firmware.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/message_bus.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/module.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/platform.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="src/reactor_core.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>../../conf/debug_arm-eabi-semihost</pElem>
+            <pElem>../../platform</pElem>
+            <pElem>../../platform/board/atmel/same70-xpld</pElem>
+            <pElem>../../platform/chip/atmel/same70</pElem>
+            <pElem>../../platform/core/arm/armv7-m</pElem>
+            <pElem>../../platform/kernel/freertos/10.0.1</pElem>
+            <pElem>../../lib/core/arm/cmsis-5.0.1</pElem>
+            <pElem>../../lib/chip/atmel/same70/dfp/2.3.98/same70b/include</pElem>
+            <pElem>../../lib/chip/atmel/same70/hri</pElem>
+            <pElem>../../lib/chip/atmel/same70/hpl/core</pElem>
+            <pElem>../../lib/chip/atmel/same70/hpl/pmc</pElem>
+            <pElem>../../lib/chip/atmel/same70/hpl/pio</pElem>
+            <pElem>../../lib/chip/atmel/same70/hpl/xdmac</pElem>
+            <pElem>../../lib/chip/atmel/same70/hal/include</pElem>
+            <pElem>../../lib/chip/atmel/same70/hal/utils/include</pElem>
+            <pElem>../../lib/kernel/freertos/10.0.1/include</pElem>
+            <pElem>../../lib/kernel/freertos/10.0.1/portable/GCC/ARM_CM7/r0p1</pElem>
+            <pElem></pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>__SAME70Q21B__</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/runtime.c" ex="false" tool="0" flavor2="2">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
