@@ -16,7 +16,7 @@ CP=cp
 RM=rm
 CCADMIN=CCadmin
 
-TARGET=arm-none-eabi
+TARGET?=arm-none-eabi
 
 ifdef TARGET
     XC_PREFIX=$(TARGET)-

@@ -13,6 +13,6 @@ size_t rfa_module_size(void) {
     return sizeof(struct module);
     }
 
-void rfa_module_define(module_t *module) {
+extern void rfa_module_define(module_t *module) {
     rfa_firmware_module_define(rfa_firmware_root(), module);
     }

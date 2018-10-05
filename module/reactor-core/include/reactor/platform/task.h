@@ -13,9 +13,9 @@
 #ifndef REACTOR_TASK_H
 #define REACTOR_TASK_H
 
-size_t rfa_platform_task_size();
-
-rfa_result_t rfa_platform_task_create(task_t *task);
+#   if(REACTOR_DYNAMIC_MEMORY_ENABLED == 1)
+rfa_result_t rfa_platform_task_create(task_t **out);
+#endif
 
 rfa_result_t rfa_platform_task_init(task_t *task);
 

@@ -10,11 +10,17 @@
 #include "service_internal.h"
 
 size_t rfa_service_size(void)
-{
-    return sizeof(struct service);
-}
+    {
+    return sizeof (struct service);
+    }
 
-component_t *rfa_service_component_get(service_t *service)
-{
+component_t const *rfa_service_component_get(service_t const *service)
+    {
     return service->component;
-}
+    }
+
+rfa_result_t rfa_service_activate(service_t const *service)
+    {
+    // TODO schedule service task for execution
+    return REACTOR_RES_OK;
+    }

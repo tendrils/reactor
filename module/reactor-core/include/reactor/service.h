@@ -20,7 +20,9 @@
 
 size_t rfa_service_size(void);
 
-component_t *rfa_service_component_get(service_t *service);
+component_t const *rfa_service_component_get(service_t const *service);
+
+rfa_result_t rfa_service_activate(service_t const *service);
 
 #endif /* REACTOR_SERVICE_H */
 

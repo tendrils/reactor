@@ -5,7 +5,7 @@
  */
 
 #include "reactor.h"
-#include "rfa/component.h"
+#include "reactor/component.h"
 #include "component_internal.h"
 
 size_t rfa_component_size(void) {

@@ -11,9 +11,7 @@
       <in>firmware.c</in>
       <in>message_bus.c</in>
       <in>module.c</in>
-      <in>platform.c</in>
       <in>reactor_core.c</in>
-      <in>runtime.c</in>
     </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -75,34 +73,6 @@
       </item>
       <item path="src/module.c" ex="false" tool="0" flavor2="10">
         <cTool flags="1">
-        </cTool>
-      </item>
-      <item path="src/platform.c" ex="false" tool="0" flavor2="10">
-        <cTool flags="0">
-          <incDir>
-            <pElem>include</pElem>
-            <pElem>../../conf/debug_arm-eabi-semihost</pElem>
-            <pElem>../../platform</pElem>
-            <pElem>../../platform/board/atmel/same70-xpld</pElem>
-            <pElem>../../platform/chip/atmel/same70</pElem>
-            <pElem>../../platform/core/arm/armv7-m</pElem>
-            <pElem>../../platform/kernel/freertos/10.0.1</pElem>
-            <pElem>../../lib/core/arm/cmsis-5.0.1</pElem>
-            <pElem>../../lib/chip/atmel/same70/dfp/2.3.98/same70b/include</pElem>
-            <pElem>../../lib/chip/atmel/same70/hri</pElem>
-            <pElem>../../lib/chip/atmel/same70/hpl/core</pElem>
-            <pElem>../../lib/chip/atmel/same70/hpl/pmc</pElem>
-            <pElem>../../lib/chip/atmel/same70/hpl/pio</pElem>
-            <pElem>../../lib/chip/atmel/same70/hpl/xdmac</pElem>
-            <pElem>../../lib/chip/atmel/same70/hal/include</pElem>
-            <pElem>../../lib/chip/atmel/same70/hal/utils/include</pElem>
-            <pElem>../../lib/kernel/freertos/10.0.1/include</pElem>
-            <pElem>../../lib/kernel/freertos/10.0.1/portable/GCC/ARM_CM7/r0p1</pElem>
-            <pElem></pElem>
-          </incDir>
-          <preprocessorList>
-            <Elem>__SAME70Q21B__</Elem>
-          </preprocessorList>
         </cTool>
       </item>
       <item path="src/reactor_core.c" ex="false" tool="0" flavor2="0">
@@ -167,8 +137,6 @@
       </item>
       <item path="src/module.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="src/platform.c" ex="false" tool="0" flavor2="2">
-      </item>
       <item path="src/reactor_core.c" ex="false" tool="0" flavor2="0">
         <cTool flags="0">
           <incDir>
@@ -196,8 +164,6 @@
             <Elem>__SAME70Q21B__</Elem>
           </preprocessorList>
         </cTool>
-      </item>
-      <item path="src/runtime.c" ex="false" tool="0" flavor2="2">
       </item>
     </conf>
   </confs>

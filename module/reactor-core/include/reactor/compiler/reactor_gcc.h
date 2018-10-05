@@ -15,4 +15,6 @@
 
 #define __preload __attribute ((constructor))
 
+#define __module __attribute ((section(".static_modules")))
+
 #endif /* REACTOR_GCC_H */

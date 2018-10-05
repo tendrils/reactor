@@ -21,10 +21,13 @@
 #include "module_internal.h"
 #include "component_internal.h"
 
+const struct module _mod_rfa_core;
 const struct component _cmp_lifecycle;
 const struct component _cmp_busmgr;
 const struct service _svc_lifecycle_root;
 const struct service _svc_busmgr_root;
+
+__module const module_t const *mod_rfa_core = &_mod_rfa_core;
 
 const struct module _mod_rfa_core = {
     2,
@@ -35,7 +38,6 @@ const struct module _mod_rfa_core = {
 };
 const struct component _cmp_lifecycle = {
     &_mod_rfa_core,
-    
 };
 const struct component _cmp_busmgr = {
     &_mod_rfa_core,
@@ -48,8 +50,10 @@ extern int main(int argc, char** argv);
 #else
 int main(int argc, char** argv)
     {
-    rfa_firmware_load();
-    rfa_firmware_run();
+    firmware_t const *rootfw = rfa_firmware_root();
+    
+    rfa_firmware_load(rootfw);
+    rfa_firmware_run(rootfw);
     }
 #endif
 

@@ -18,17 +18,17 @@
 
 struct firmware {
     uint8_t module_count;
-    module_t *modules[REACTOR_FIRMWARE_MODULES_MAX];
+    module_t const *modules[REACTOR_FIRMWARE_MODULES_MAX];
     uint8_t component_count;
-    component_t *components[REACTOR_FIRMWARE_COMPONENTS_MAX];
+    component_t const *components[REACTOR_FIRMWARE_COMPONENTS_MAX];
     uint8_t service_count;
-    service_t *services[REACTOR_FIRMWARE_SERVICES_MAX];
+    service_t const *services[REACTOR_FIRMWARE_SERVICES_MAX];
 };
 
-const struct firmware _rootfw = {
-    0, NULL,
-    0, NULL,
-    0, NULL
+struct firmware _rootfw = {
+    0, { NULL },
+    0, { NULL },
+    0, { NULL },
 };
 
 #endif /* FIRMWARE_INTERNAL_H */

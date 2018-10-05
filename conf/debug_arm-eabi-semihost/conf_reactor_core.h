@@ -23,6 +23,8 @@
 #define REACTOR_MODULE_COMPONENTS_MAX           4
 #define REACTOR_MODULE_BOOTSERVICES_MAX         4
 
+#define REACTOR_DYNAMIC_MEMORY_ENABLED          1
+
 #define RPI_KERNEL                      RPI_KERNEL_FREERTOS
 
 #endif /* CONF_REACTOR_CORE_H */

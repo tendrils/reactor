@@ -17,6 +17,7 @@
 #   error "REACTOR_H must be included before" __FILE__
 #endif
 
+#include <reactor/platform/memory.h>
 #include <reactor/platform/queue.h>
 #include <reactor/platform/scheduler.h>
 #include <reactor/platform/task.h>

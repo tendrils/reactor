@@ -5,20 +5,20 @@
  */
 
 /* 
- * File:   reactor/platform/queue.h
+ * File:   reactor/platform/scheduler.h
  * Author: Tendril
  *
  * Created on March 29, 2018, 11:28 AM
  */
 
-#ifndef REACTOR_QUEUE_H
-#define REACTOR_QUEUE_H
+#ifndef REACTOR_MEMORY_H
+#define REACTOR_MEMORY_H
 
 #if(REACTOR_DYNAMIC_MEMORY_ENABLED == 1)
-rfa_result_t rfa_platform_queue_alloc(queue_t **out, uint8_t cell_size, uint8_t cell_count);
+    void* rfa_platform_malloc(size_t length);
+    void rfa_platform_free(void *object);
+    size_t rfa_platform_get_free_heap_size();
 #endif
 
-rfa_result_t rfa_platform_queue_destroy(queue_t *queue);
-
-#endif /* REACTOR_KERNEL_H */
+#endif /* REACTOR_MEMORY_H */
 
