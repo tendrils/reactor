@@ -18,19 +18,19 @@
 
 rfa_result_t rpi_scheduler_start() {
     vTaskStartScheduler();
-    return REACTOR_RES_OK;
+    return RFA_RES_OK;
 }
 
 rfa_result_t rpi_scheduler_pause() {
     vTaskEndScheduler();
-    return REACTOR_RES_OK;
+    return RFA_RES_OK;
 }
 
 scheduler_state_t rpi_scheduler_state_get() {
     switch (xTaskGetSchedulerState()) {
         case taskSCHEDULER_SUSPENDED:
             return SCHEDULER_PAUSE;
-        case taskSCHEDULER_NOT_STARTED:o0puij
+        case taskSCHEDULER_NOT_STARTED:
             return SCHEDULER_INIT;
         case taskSCHEDULER_RUNNING:
             return SCHEDULER_RUN;

@@ -20,11 +20,18 @@ extern "C" {
 
 /* RPI back-end symbol macros */
 #define RPI_queue_t xQueueHandle
+#define RPI_staticqueue_t StaticQueue_t
 #define RPI_heap_t heap_t
     
 #define RPI_task_t xTaskHandle
 #define RPI_statictask_t StaticTask_t
 #define RPI_taskfunc_t TaskFunction_t
+#define RPI_prio_t UBaseType_t
+    
+    typedef struct queue {
+        xQueueHandle handle;
+        StaticQueue_t header;
+    };
 
     typedef struct heap {
         const void *start;

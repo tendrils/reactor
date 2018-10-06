@@ -34,12 +34,16 @@ rfa_result_t rpi_scheduler_pause();
 scheduler_state_t rpi_scheduler_state_get();
 
 #if(REACTOR_DYNAMIC_MEMORY_ENABLED == 1)
-rfa_result_t rpi_task_create(RPI_task_t *out, const char * const name);
+rfa_result_t rpi_task_create
+    (
+        RPI_taskfunc_t function, const char * const name, unsigned short stack_depth,
+        void *pvParameters, RPI_prio_t uxPriority, RPI_task_t *pxCreatedTask
+    );
 rfa_result_t rpi_task_destroy(RPI_task_t task);
 #endif
 
-rfa_result_t rpi_task_create_static(RPI_queue_t *task);
-rfa_result_t rpi_task_start(RPI_queue_t task);
+rfa_result_t rpi_task_create_static(RPI_task_t task);
+rfa_result_t rpi_task_start(RPI_task_t task);
 rfa_result_t rpi_task_stop(RPI_task_t task);
 
 #if(REACTOR_DYNAMIC_MEMORY_ENABLED == 1)

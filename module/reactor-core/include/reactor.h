@@ -25,8 +25,8 @@
 // API return codes
 
 typedef enum api_result {
-    REACTOR_RES_FAIL = 0,
-    REACTOR_RES_OK
+    RFA_RES_FAIL = 0,
+    RFA_RES_OK
 } rfa_result_t;
 
 // core firmware-architecture types
