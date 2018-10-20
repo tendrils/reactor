@@ -5,25 +5,21 @@
  */
 
 /* 
- * File:   same70-xpld.h
- * Author: Tendril
- *
- * Created on April 5, 2018, 10:43 AM
+ * 
  */
 
-#ifndef SAME70_XPLD_H
-#define SAME70_XPLD_H
+#ifndef RPI_BOARD_H
+#define RPI_BOARD_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-#define REACTOR_CHIP_MODEL_Q21B
+    
 
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* SAME70_XPLD_H */
+#endif /* RPI_BOARD_H */
 

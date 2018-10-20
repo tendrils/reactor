@@ -8,17 +8,18 @@
  * 
  */
 
-#ifndef PLATFORM_CORE_H
-#define PLATFORM_CORE_H
+#ifndef RPI_CORE_H
+#define RPI_CORE_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
     
+    // CMSIS headers for arm chips are included by their respective chip headers
     
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* PLATFORM_CORE_H */
+#endif /* RPI_CORE_H */
 

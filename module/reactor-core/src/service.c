@@ -9,18 +9,22 @@
 
 #include "service_internal.h"
 
-size_t rfa_service_size(void)
-    {
-    return sizeof (struct service);
-    }
-
-component_t const *rfa_service_component_get(service_t const *service)
-    {
+component_t const *rfa_service_component_get(const service_t *service) {
     return service->component;
-    }
+}
 
-rfa_result_t rfa_service_activate(service_t const *service)
-    {
+rfa_result_t rfa_service_activate(service_t *service) {
     // TODO schedule service task for execution
+    
+    if(service->state 
+    
     return REACTOR_RES_OK;
-    }
+}
+
+service_state_t rfa_service_state_get(const service_t *service) {
+    return service->state;
+}
+
+bool rfa_service_is_active(const service_t *service) {
+    return (service->state == SERVICE_ACTIVE);
+}

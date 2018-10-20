@@ -18,11 +18,12 @@
 #   error "REACTOR_H must be included before " __FILE__
 #endif
 
-size_t rfa_service_size(void);
+component_t *rfa_service_component_get(const service_t *service);
 
-component_t const *rfa_service_component_get(service_t const *service);
+service_state_t rfa_service_state_get(const service_t *service);
 
-rfa_result_t rfa_service_activate(service_t const *service);
+bool rfa_service_is_active(const service_t *service);
+
+rfa_result_t rfa_service_activate(service_t *service);
 
 #endif /* REACTOR_SERVICE_H */
-

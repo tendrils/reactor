@@ -10,8 +10,8 @@
  *         platform includes for FreeRTOS 10.0.1
  */
 
-#ifndef REACTOR_PLATFORM_KERNEL_H
-#define REACTOR_PLATFORM_KERNEL_H
+#ifndef RPI_KERNEL_H
+#define RPI_KERNEL_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -25,5 +25,5 @@ extern "C" {
 }
 #endif
 
-#endif /* REACTOR_PLATFORM_KERNEL_H */
+#endif /* RPI_KERNEL_H */
 

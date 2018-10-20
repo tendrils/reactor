@@ -48,9 +48,15 @@ typedef enum scheduler_state {
     SCHEDULER_PAUSE
 } scheduler_state_t;
 
+typedef enum service_state {
+    SERVICE_ACTIVE = 0,
+    SERVICE_INACTIVE
+} service_state_t;
+
 // RTOS kernel abstraction
 typedef struct queue queue_t;
 typedef struct heap heap_t;
 typedef struct task task_t;
+typedef RPI_mutex_t mutex_t;
 
 #endif /* REACTOR_H */

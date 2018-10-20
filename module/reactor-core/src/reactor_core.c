@@ -54,6 +54,8 @@ int main(int argc, char** argv)
     
     rfa_firmware_load(rootfw);
     rfa_firmware_run(rootfw);
+    
+    return 1;
     }
 #endif
 
@@ -67,7 +69,7 @@ __preload void rfa_core_boot()
 
 rfa_result_t rfa_core_init()
     {
-    return REACTOR_RES_OK;
+    return RFA_RES_OK;
     }
 
 module_t *rfa_core_moddesc_get()

@@ -59,25 +59,31 @@ rfa_result_t rfa_platform_queue_destroy(queue_t *queue)
 #if(REACTOR_DYNAMIC_MEMORY_ENABLED == 1)
 rfa_result_t rfa_platform_task_create(task_t **out)
     {
-    task_t *task; // TODO allocate memory for task object
+    task_t *task;
     
-    if(rpi_task_create(&task->handle))
-        {
+    if((task = rpi_malloc(sizeof(task_t))) == NULL)
+    {
+        return RFA_RES_FAIL;
+    }
+    
+    if(rpi_task_create(RPI_taskfunc_t function, const char * const name, unsigned short stack_depth,
+        void *pvParameters, RPI_prio_t uxPriority, &task->handle))
+    {
         *out = task;
         return RFA_RES_OK;
-        }
+    }
     else
-        {
-        // TODO release allocated memory
+    {
+        rpi_free(task);
         return RFA_RES_FAIL;
-        }
+    }
     }
 #endif
 
 rfa_result_t rfa_platform_task_init(task_t *task)
-    {
+{
     return rpi_task_create_static(task);
-    }
+}
 
 rfa_result_t rfa_platform_task_destroy(task_t *task)
     {

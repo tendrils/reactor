@@ -26,8 +26,8 @@
             <formatting>
                 <project-formatting-style>true</project-formatting-style>
                 <c-style>Whitesmiths|Whitesmiths</c-style>
-                <cpp-style>ANSI|ANSI</cpp-style>
-                <header-style>ANSI|ANSI</header-style>
+                <cpp-style>Whitesmiths|Whitesmiths</cpp-style>
+                <header-style>Whitesmiths|Whitesmiths</header-style>
             </formatting>
         </data>
     </configuration>

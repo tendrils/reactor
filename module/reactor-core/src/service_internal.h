@@ -15,8 +15,9 @@
 #define SERVICE_INTERNAL_H
 
 struct service {
-    const char *name;
-    const component_t *component;
+    service_state_t state;
+    const char const *name;
+    const component_t const *component;
 };
 
 #endif /* SERVICE_INTERNAL_H */
