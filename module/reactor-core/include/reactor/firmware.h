@@ -22,21 +22,21 @@ firmware_t* rfa_firmware_root();
 
 size_t rfa_firmware_size(void);
 
-rfa_result_t rfa_firmware_module_define(firmware_t *firmware, module_t const *module);
+rfa_result_t rfa_firmware_module_define(firmware_t *firmware, module_t *module);
 
-uint8_t rfa_firmware_module_count(firmware_t const *firmware);
+uint8_t rfa_firmware_module_count(firmware_t *firmware);
 
-module_t const* rfa_firmware_module_get(firmware_t const *firmware, uint8_t idx);
+module_t *rfa_firmware_module_get(firmware_t *firmware, uint8_t idx);
 
-uint8_t rfa_firmware_service_count(firmware_t const *firmware);
+uint8_t rfa_firmware_service_count(firmware_t *firmware);
 
-service_t const* rfa_firmware_service_get(firmware_t const *firmware, uint8_t idx);
+service_t *rfa_firmware_service_get(firmware_t *firmware, uint8_t idx);
 
 // initialize services + subsystems
-rfa_result_t rfa_firmware_load(firmware_t const *firmware);
+rfa_result_t rfa_firmware_load(firmware_t *firmware);
 
 // start message queues, pass control to scheduler/runloop
-rfa_result_t rfa_firmware_run(firmware_t const *firmware);
+rfa_result_t rfa_firmware_run(firmware_t *firmware);
 
 #endif /* REACTOR_FIRMWARE_H */
 

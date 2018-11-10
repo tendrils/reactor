@@ -1,4 +1,4 @@
-NAME=reactor-platform
+NAME=rpi-backend
 BASE:=..
 
 default: build

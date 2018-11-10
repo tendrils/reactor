@@ -11,14 +11,16 @@
 #ifndef RPI_CORE_H
 #define RPI_CORE_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-    
-    // CMSIS headers for arm chips are included by their respective chip headers
-    
-#ifdef __cplusplus
-}
+// CMSIS headers for arm chips are included by their respective chip headers
+
+#define RPI_CORE_IS_ARMV7
+#define RPI_CORE_IS_ARMV7_M
+#define RPI_CORE_IS_CORTEX_M
+
+#define RPI_CORE_HAS_NVIC
+
+#if(__CORTEX_M == 7U)
+#   define RPI_CORE_IS_CORTEX_M7
 #endif
 
 #endif /* RPI_CORE_H */

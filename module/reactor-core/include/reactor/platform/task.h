@@ -14,12 +14,16 @@
 #define REACTOR_TASK_H
 
 #if(REACTOR_DYNAMIC_MEMORY_ENABLED == 1)
-rfa_result_t rfa_platform_task_create(task_t **out);
-#endif
-
-rfa_result_t rfa_platform_task_init(task_t *task);
+rfa_result_t rfa_platform_task_create(taskfunc_t function,
+        const char *name, unsigned short stack_depth,
+        void *params, taskprio_t uxPriority, task_t **out);
 
 rfa_result_t rfa_platform_task_destroy(task_t *task);
+#endif
+
+rfa_result_t rfa_platform_task_create_static(task_t *task, taskfunc_t function,
+        const char *name, unsigned short stack_depth,
+        void *params, taskprio_t uxPriority);
 
 rfa_result_t rfa_platform_task_start(task_t *task);
 

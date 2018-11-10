@@ -39,55 +39,71 @@ scheduler_state_t rpi_scheduler_state_get() {
 
 #if(REACTOR_DYNAMIC_MEMORY_ENABLED == 1)
 
-rfa_result_t rpi_task_create
-(
-        TaskFunction_t function, const char * const name, unsigned short stack_depth,
-        void *pvParameters, UBaseType_t uxPriority, TaskHandle_t *pxCreatedTask
-        ) {
-    RPI_task_t *task = rpi_malloc(sizeof RPI_task_t);
-    
-    if(task == NULL) {
+rfa_result_t rpi_task_create(
+        RPI_taskfunc_t function, const char * const name, unsigned short stack_depth,
+        void *params, RPI_prio_t priority, RPI_task_t *out) {
+    task_t *task;
+    BaseType_t error;
+
+    task = rpi_malloc(sizeof (task_t));
+    if (task == NULL) {
         return RFA_RES_FAIL;
     }
 
-    if (xTaskCreate(*task)) {
-        out = task;
-        return RFA_RES_OK;
-    } else {
+    error = xTaskCreate(function, name, stack_depth, params, priority, &task->handle);
+    if (error != pdPASS) {
+        // TODO report error status
         rpi_free(task);
         return RFA_RES_FAIL;
     }
+
+    *out = task;
+    return RFA_RES_OK;
 }
 #endif
 
-xTaskHandle rpi_task_create_static
-(
-        TaskFunction_t function, const char *name, const uint32 stack_depth,
-        void * const params, UBaseType priority, StackType_t * const stack_buffer, StaticTask_t *task
+RPI_task_t rpi_task_create_static(
+        RPI_taskfunc_t function, const char * const name, const uint32_t stack_depth,
+        void * const params, RPI_prio_t priority, RPI_stack_t * const stack_buffer, RPI_statictask_t *header
         ) {
-    return xTaskCreateStatic(function, name, stack_depth, params, priority, stack_buffer, task);
+    return xTaskCreateStatic(function, name, stack_depth, params, priority, stack_buffer, header);
 }
 
-rfa_result_t rpi_task_destroy(xTaskHandle task);
-rfa_result_t rpi_task_start(xTaskHandle task);
-rfa_result_t rpi_task_stop(xTaskHandle task);
+rfa_result_t rpi_task_destroy(TaskHandle_t task);
+rfa_result_t rpi_task_start(TaskHandle_t task);
+rfa_result_t rpi_task_stop(TaskHandle_t task);
 
 #if(REACTOR_DYNAMIC_MEMORY_ENABLED == 1)
 
-rfa_result_t rpi_queue_create(xQueueHandle *out, uint8_t cell_size, uint8_t cell_count) {
-    if (*out = xQueueCreate(cell_count, cell_size)) {
+rfa_result_t rpi_queue_create(
+        QueueHandle_t *out, uint8_t cell_size, uint8_t cell_count) {
+    StaticQueue_t *header;
+    uint8_t *buffer;
+
+    header = rpi_malloc(sizeof (StaticQueue_t));
+    if (header == NULL) {
+        return RFA_RES_FAIL;
+    }
+
+    buffer = rpi_malloc(cell_count * cell_size);
+    if (buffer == NULL) {
+        rpi_free(header);
+        return RFA_RES_FAIL;
+    }
+
+    if (*out = xQueueCreateStatic(cell_count, cell_size, buffer, header)) {
         return RFA_RES_OK;
     }
     return RFA_RES_FAIL;
 }
 #endif
 
-xQueueHandle rpi_queue_create_static(
-        StaticQueue_t *queue, uint8_t *buffer, uint8_t cell_size, uint8_t cell_count) {
-    return xQueueCreateStatic(cell_count, cell_size, buffer, queue);
+QueueHandle_t rpi_queue_create_static(
+        StaticQueue_t *header, uint8_t *buffer, uint8_t cell_size, uint8_t cell_count) {
+    return xQueueCreateStatic(cell_count, cell_size, buffer, header);
 }
 
-rfa_result_t rpi_queue_destroy(xQueueHandle queue) {
+rfa_result_t rpi_queue_destroy(QueueHandle_t queue) {
     vQueueDelete(queue);
     return RFA_RES_OK;
 }
@@ -99,10 +115,37 @@ void* rpi_malloc(size_t length) {
 }
 
 void rpi_free(void *object) {
-    return vPortFree(object);
+    vPortFree(object);
 }
 
 size_t rpi_get_free_heap_size() {
     return xPortGetFreeHeapSize();
 }
 #endif
+
+/* 
+ * static memory allocation callbacks required by FreeRTOS when in static mode
+ */
+void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer,
+                                    StackType_t **ppxIdleTaskStackBuffer,
+                                    uint32_t *pulIdleTaskStackSize )
+{
+static StaticTask_t xIdleTaskTCB;
+static StackType_t uxIdleTaskStack[ configMINIMAL_STACK_SIZE ];
+
+    *ppxIdleTaskTCBBuffer = &xIdleTaskTCB;
+    *ppxIdleTaskStackBuffer = uxIdleTaskStack;
+    *pulIdleTaskStackSize = configMINIMAL_STACK_SIZE;
+}
+
+void vApplicationGetTimerTaskMemory( StaticTask_t **ppxTimerTaskTCBBuffer,
+                                     StackType_t **ppxTimerTaskStackBuffer,
+                                     uint32_t *pulTimerTaskStackSize )
+{
+static StaticTask_t xTimerTaskTCB;
+static StackType_t uxTimerTaskStack[ configTIMER_TASK_STACK_DEPTH ];
+
+    *ppxTimerTaskTCBBuffer = &xTimerTaskTCB;
+    *ppxTimerTaskStackBuffer = uxTimerTaskStack;
+    *pulTimerTaskStackSize = configTIMER_TASK_STACK_DEPTH;
+}

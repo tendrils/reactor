@@ -14,10 +14,6 @@
 #ifndef DEFS_H
 #define DEFS_H
 
-#ifdef __cplusplus
-extern "C"
-{
-#endif
 
 /* task scheduler values */
 #define RPI_KERNEL_NONE                     0
@@ -26,20 +22,24 @@ extern "C"
 #define RPI_KERNEL_RTX5                     3
 
 /* chip vendor values */
-#define REACTOR_CHIP_VENDOR_ATMEL                   0
+#define RPI_CHIP_VENDOR_ATMEL                   0
 
 /* chip product line values */
-#define REACTOR_CHIP_LINE_ATMEL_SAME70              0
+#define RPI_CHIP_LINE_ATMEL_SAME70              0
 
 /* chip product model values */
-#define REACTOR_CHIP_MODEL_ATMEL_SAME70_Q21         0
+#define RPI_CHIP_MODEL_ATMEL_SAME70_Q21         0
 
 /* system board values */
-#define REACTOR_BOARD_SAME70_XPLD                   0
+#define RPI_BOARD_SAME70_XPLD                   0
 
-#ifdef __cplusplus
-}
-#endif
+/* CPU core values */
+#define RPI_CORE_CORTEX_M0                      cortex-m0
+#define RPI_CORE_CORTEX_M0P                     cortex-m0+
+#define RPI_CORE_CORTEX_M1                      cortex-m1
+#define RPI_CORE_CORTEX_M3                      cortex-m3
+#define RPI_CORE_CORTEX_M4                      cortex-m4
+#define RPI_CORE_CORTEX_M7                      cortex-m7
 
 #endif /* DEFS_H */
 

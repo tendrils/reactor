@@ -5,7 +5,7 @@
  */
 
 /* 
- * File:   port_kernel_freertos.h
+ * File:   kernel_freertos.h
  * Author: Tendril
  *
  * Created on June 12, 2018, 9:53 PM
@@ -18,25 +18,23 @@
 extern "C" {
 #endif
 
-/* RPI back-end symbol macros */
-#define RPI_queue_t xQueueHandle
-#define RPI_staticqueue_t StaticQueue_t
-#define RPI_heap_t heap_t
-    
-#define RPI_task_t xTaskHandle
-#define RPI_statictask_t StaticTask_t
-#define RPI_taskfunc_t TaskFunction_t
-#define RPI_prio_t UBaseType_t
-    
-    typedef struct queue {
-        xQueueHandle handle;
-        StaticQueue_t header;
-    };
-
-    typedef struct heap {
+    typedef struct rpi_heap {
         const void *start;
         const uint32_t size;
-    } heap_t;
+    } rpi_heap_t;
+
+    /* RPI back-end symbol macros */
+#define RPI_queue_t                 QueueHandle_t
+#define RPI_staticqueue_t           StaticQueue_t
+#define RPI_semaphore_t             SemaphoreHandle_t
+#define RPI_staticsemaphore_t       StaticSemaphore_t
+
+#define RPI_task_t                  TaskHandle_t
+#define RPI_statictask_t            StaticTask_t
+#define RPI_taskfunc_t              TaskFunction_t
+#define RPI_prio_t                  UBaseType_t
+#define RPI_stack_t                 StackType_t
+#define RPI_heap_t                  rpi_heap_t
 
 #ifdef __cplusplus
 }

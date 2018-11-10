@@ -21,7 +21,7 @@ size_t rfa_firmware_size(void)
     return sizeof (firmware_t);
     }
 
-rfa_result_t rfa_firmware_module_define(firmware_t *app, module_t const *module)
+rfa_result_t rfa_firmware_module_define(firmware_t *app, module_t *module)
     {
     if (app->module_count < REACTOR_FIRMWARE_MODULES_MAX &&
         (app->component_count + module->component_count) <= REACTOR_FIRMWARE_COMPONENTS_MAX)
@@ -31,43 +31,43 @@ rfa_result_t rfa_firmware_module_define(firmware_t *app, module_t const *module)
             {
             app->components[app->component_count++] = module->components[i];
             }
-        return REACTOR_RES_OK;
+        return RFA_RES_OK;
         }
-    return REACTOR_RES_FAIL;
+    return RFA_RES_FAIL;
     }
 
-uint8_t rfa_firmware_module_count(firmware_t const *app)
+uint8_t rfa_firmware_module_count(firmware_t *app)
     {
     return app->module_count;
     }
 
-module_t const* rfa_firmware_module_get(firmware_t const *app, uint8_t idx)
+module_t *rfa_firmware_module_get(firmware_t *app, uint8_t idx)
     {
     return app->modules[idx];
     }
 
-uint8_t rfa_firmware_service_count(firmware_t const *app)
+uint8_t rfa_firmware_service_count(firmware_t *app)
     {
     return app->service_count;
     }
 
-service_t const* rfa_firmware_service_get(firmware_t const *app, uint8_t idx)
+service_t *rfa_firmware_service_get(firmware_t *app, uint8_t idx)
     {
     return app->services[idx];
     }
 
 // initialize services + subsystems
 
-rfa_result_t rfa_firmware_load(firmware_t const *firmware)
+rfa_result_t rfa_firmware_load(firmware_t *firmware)
     {
     
-    return REACTOR_RES_OK;
+    return RFA_RES_OK;
     }
 
 // start message queues, pass control to scheduler/runloop
 
-rfa_result_t rfa_firmware_run(firmware_t const *firmware)
+rfa_result_t rfa_firmware_run(firmware_t *firmware)
     {
     rfa_platform_scheduler_start();
-    return REACTOR_RES_OK;
+    return RFA_RES_OK;
     }

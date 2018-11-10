@@ -12,6 +12,6 @@ size_t rfa_component_size(void) {
     return sizeof (struct component);
 }
 
-rfa_result_t rfa_component_initialize(component_t *component) {
-    return component->init_static();
+rfa_result_t rfa_component_initialize(firmware_t *context, component_t *component) {
+    return component->init_static(context, component);
 }

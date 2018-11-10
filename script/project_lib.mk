@@ -1,7 +1,7 @@
 # Common build rules and properties for reactor modules
 include $(BASE)/script/init.mk
 
-PRODUCT_STRING=lib$(NAME)--$(PLATFORM_STRING)
+PRODUCT_STRING=lib$(NAME)_$(PLATFORM_STRING)
 
 PRODUCT_LIB=$(DISTDIR)/$(PRODUCT_STRING).a
 

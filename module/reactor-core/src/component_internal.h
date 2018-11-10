@@ -15,7 +15,10 @@
 
 struct component {
     const module_t *module;
-    const rfa_result_t (*init_static)();
+    const rfa_result_t (*init_static)(
+        firmware_t *context,
+        component_t *component
+    );
 };
 
 #endif /* COMPONENT_INTERNAL_H */

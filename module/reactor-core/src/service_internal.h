@@ -16,8 +16,12 @@
 
 struct service {
     service_state_t state;
-    const char const *name;
-    const component_t const *component;
+    const char *name;
+    component_t *component;
+    rfa_result_t (*init)(
+        firmware_t *context,
+        service_t *service
+    );
 };
 
 #endif /* SERVICE_INTERNAL_H */

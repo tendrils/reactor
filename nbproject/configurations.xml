@@ -44,6 +44,11 @@
       <df name="module">
         <df name="reactor-core">
           <df name="src">
+            <df name="platform">
+              <in>kernel_freertos.c</in>
+              <in>platform.c</in>
+            </df>
+            <in>firmware.c</in>
             <in>platform.c</in>
             <in>reactor_core.c</in>
           </df>
@@ -302,14 +307,32 @@
         <cTool flags="0">
         </cTool>
       </item>
-      <item path="module/reactor-core/src/platform.c" ex="false" tool="0" flavor2="0">
+      <item path="module/reactor-core/src/firmware.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="module/reactor-core/src/platform.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="module/reactor-core/src/platform/kernel_freertos.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="module/reactor-core/src/platform/platform.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
         <cTool flags="0">
         </cTool>
       </item>
       <item path="module/reactor-core/src/reactor_core.c"
             ex="false"
             tool="0"
-            flavor2="0">
+            flavor2="2">
         <cTool flags="0">
         </cTool>
       </item>

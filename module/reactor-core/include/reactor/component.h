@@ -19,7 +19,7 @@
 
 size_t rfa_component_size(void);
 
-rfa_result_t rfa_component_initialize(component_t *component);
+rfa_result_t rfa_component_initialize(firmware_t *context, component_t *component);
 
 #endif /* REACTOR_COMPONENT_H */
 

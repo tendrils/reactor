@@ -14,13 +14,13 @@
 #ifndef REACTOR_H
 #define REACTOR_H
 
+#include <stdint.h>
+#include <stdbool.h>
 #include <stdlib.h>
 
 #include <reactor/defs.h>
 #include <reactor/compiler.h>
 #include <conf_reactor_core.h>
-
-#include <rpi_backend.h>
 
 // API return codes
 
@@ -50,6 +50,7 @@ typedef enum scheduler_state {
 
 typedef enum service_state {
     SERVICE_ACTIVE = 0,
+    SERVICE_INIT,
     SERVICE_INACTIVE
 } service_state_t;
 
@@ -57,6 +58,10 @@ typedef enum service_state {
 typedef struct queue queue_t;
 typedef struct heap heap_t;
 typedef struct task task_t;
-typedef RPI_mutex_t mutex_t;
+typedef struct lock mutex_t;
+typedef struct lock semaphore_t;
+
+typedef void(*taskfunc_t)(void *);
+typedef uint32_t taskprio_t;
 
 #endif /* REACTOR_H */
