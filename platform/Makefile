@@ -1,8 +1,8 @@
 NAME=rpi-backend
 BASE:=..
 
+include $(BASE)/project/project_lib.mk
+
 default: build
 
 OBJECTFILES+=$(PLATFORM_OBJECTS)
-
-include $(BASE)/script/project_lib.mk

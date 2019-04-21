@@ -1,3 +1,6 @@
+ifndef REACTOR_PLATFORM_KERNEL
+REACTOR_PLATFORM_KERNEL = 1
+
 ifeq ($(CORE_ID), cortex-m7)
     K_CPUARCH=ARM_CM7
     K_CPUVER=r0p1
@@ -6,7 +9,7 @@ else
     exit 1
 endif
 
-K_ROOT=$(BASE)/lib/kernel/$(KERNEL)/$(KERNEL_VERSION)
+K_ROOT=$(RESOURCE_BASE)/kernel/$(KERNEL)/$(KERNEL_VERSION)
 
 K_INCLUDE=$(K_ROOT)/include
 KERNEL_PORTDIR=$(K_ROOT)/portable/GCC/$(K_CPUARCH)/$(K_CPUVER)
@@ -42,3 +45,5 @@ $(BUILDDIR)/heap.o: $(K_ROOT)/portable/MemMang/heap_1.c
 
 $(BUILDDIR)/port.o: $(KERNEL_PORTDIR)/port.c
 	$(CC) $(CFLAGS) -o $@ $^
+
+endif

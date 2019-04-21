@@ -1,9 +1,3 @@
-nbproject/private
-
+build/*
 module/*/build/*
-module/*/nbproject/private
-
-lib/chip/*/*/dfp/*
-
-obj
-dist
+build-host.conf
