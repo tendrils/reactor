@@ -5,14 +5,14 @@
  */
 
 /* 
- * File:   conf_rfa_core.h
+ * File:   ketl-base/conf_reactor.h
  * 
- * reactor-core configuration for ketl-core project
+ * reactor framework configuration for ketl project
  * 
  */
 
-#ifndef CONF_REACTOR_CORE_H
-#define CONF_REACTOR_CORE_H
+#ifndef CONF_REACTOR_H
+#define CONF_REACTOR_H
 
 /* software platform configuration */
 
@@ -27,4 +27,4 @@
 
 #define RPI_KERNEL                      RPI_KERNEL_NONE
 
-#endif /* CONF_REACTOR_CORE_H */
+#endif /* CONF_REACTOR_H */

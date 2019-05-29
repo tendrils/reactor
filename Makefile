@@ -1,8 +1,9 @@
 NAME=reactor
 BASE:=.
+SCRIPT_DIR=$(BASE)/reactor-build
 SUBPROJECTS = $(MODDIRS) $(PLATFORM_DIR)
 
-include project/project_aggregate.mk
-include project/project_exe.mk
+include $(SCRIPT_DIR)/project_aggregate.mk
+include $(SCRIPT_DIR)/project_exe.mk
 
 default: build

@@ -11,10 +11,10 @@
  * Created on March 27, 2018, 11:39 PM
  */
 
-#ifndef LIFECYCLE_INTERNAL_H
-#define LIFECYCLE_INTERNAL_H
+#ifndef REACTOR_CORE_INTERNAL_H
+#define REACTOR_CORE_INTERNAL_H
     
-extern const struct component _cmp_lifecycle;
+extern const struct module _mod_reactor_core;
 
-#endif /* LIFECYCLE_INTERNAL_H */
+#endif /* REACTOR_CORE_INTERNAL_H */
 

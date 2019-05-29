@@ -20,7 +20,8 @@
 
 #include <reactor/defs.h>
 #include <reactor/compiler.h>
-#include <conf_reactor_core.h>
+
+#include "conf_reactor.h"
 
 // API return codes
 

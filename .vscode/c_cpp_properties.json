@@ -1,0 +1,29 @@
+{
+    "env": {
+        "myDefaultIncludePath": [
+            "${workspaceFolder}",
+            "${workspaceFolder}/include"
+        ],
+        "targetConfig": "ketl-base"
+    },
+    "configurations": [
+        {
+            "name": "WSL",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "includePath": [
+                "${workspaceFolder}/conf/${targetConfig}",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/../ketl-core/include"
+            ],
+            "forcedInclude": [
+                "${workspaceFolder}/module/reactor-core/include/reactor.h"
+            ],
+            "defines": [],
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

@@ -12,6 +12,16 @@ size_t rfa_component_size(void) {
     return sizeof (struct component);
 }
 
+module_t *rfa_component_module_get(component_t *component) 
+    {
+        return component->module;
+    }
+
+void rfa_component_module_set(component_t *component, module_t *module) 
+    {
+        component->module = module;
+    }
+
 rfa_result_t rfa_component_initialize(firmware_t *context, component_t *component) {
     return component->init_static(context, component);
 }

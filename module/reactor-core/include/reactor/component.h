@@ -19,6 +19,9 @@
 
 size_t rfa_component_size(void);
 
+module_t *rfa_component_module_get(component_t *component);
+void rfa_component_module_set(component_t *component, module_t *module);
+
 rfa_result_t rfa_component_initialize(firmware_t *context, component_t *component);
 
 #endif /* REACTOR_COMPONENT_H */

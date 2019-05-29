@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "module/reactor-core"
+		},
+		{
+			"path": "module/ketl-core"
+		}
+	],
+	"settings": {}
+}
