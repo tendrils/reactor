@@ -6,7 +6,7 @@
 
 #include <reactor.h>
 
-#include "platform_internal.h"
+#include "platform/platform_internal.h"
 
 #if (RPI_KERNEL != RPI_KERNEL_FREERTOS)
 #error "[" __FILE__ "] cannot be compiled against kernel [" RPI_KERNEL "]"

@@ -1,0 +1,5 @@
+# ReBuild project descriptor for the Ketl project
+project_name=ketl
+conf_default=ketl-base
+rebuild_modules+=aggregate modular gcc
+subproject_dirs+=$(wildcard module/*) platform

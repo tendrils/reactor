@@ -1,0 +1,4 @@
+# ReBuild project descriptor for the ketl-core module
+project_name=ketl-core
+conf_default=ketl-base
+rebuild_modules+=gcc

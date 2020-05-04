@@ -1,3 +1,0 @@
-#!/bin/bash
-
-[[ $1 -le $2 ]] && echo true

@@ -1,0 +1,3 @@
+[submodule "rebuild"]
+	path = rebuild
+	url = https://github.com/tendrils/reactor-build.git

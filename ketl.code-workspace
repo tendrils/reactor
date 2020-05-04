@@ -1,12 +1,15 @@
 {
 	"folders": [
 		{
+			"name": "reactor",
 			"path": "."
 		},
 		{
+			"name": "reactor-core",
 			"path": "module/reactor-core"
 		},
 		{
+			"name": "ketl-core",
 			"path": "module/ketl-core"
 		}
 	],

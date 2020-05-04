@@ -1,0 +1,4 @@
+# ReBuild project descriptor for the reactor-core module
+project_name=reactor-core
+conf_default=reactor-base
+rebuild_modules+=gcc

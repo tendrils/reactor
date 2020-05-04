@@ -1,0 +1,10 @@
+# ReBuild project descriptor for the Reactor project
+project_name=reactor
+project_traits=\
+    rebuild:parent \
+    c_binary:executable \
+    c_binary:system_image \
+    reactor:layer
+rebuild_conf_default=reactor-base
+rebuild_modules+=reactor_layer c_binary_executable c_binary_sysimg
+reactor_subproject_dirs+=platform

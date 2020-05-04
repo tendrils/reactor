@@ -33,6 +33,10 @@
 /* system board values */
 #define RPI_BOARD_SAME70_XPLD                   0
 
+#define RPI_CORE_VENDOR_ARM                     0
+#define RPI_CORE_VENDOR_RISCV                   1
+#define RPI_CORE_VENDOR_INTEL                   2
+
 /* CPU core values */
 #define RPI_CORE_CORTEX_M0                      cortex-m0
 #define RPI_CORE_CORTEX_M0P                     cortex-m0+

@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 
-#include "reactor.h"
-#include "reactor/component.h"
+#include <reactor.h>
+#include <reactor/component.h>
 #include "component_internal.h"
 
 size_t rfa_component_size(void) {

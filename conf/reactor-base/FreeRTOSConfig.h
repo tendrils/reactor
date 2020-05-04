@@ -32,6 +32,8 @@
 
 uint32_t SystemCoreClock;
 
+#include <rpi_backend.h>
+
 #define configUSE_PREEMPTION					1
 #define configUSE_PORT_OPTIMISED_TASK_SELECTION                 1
 #define configUSE_QUEUE_SETS					1

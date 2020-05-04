@@ -5,14 +5,13 @@
  */
 
 /* 
- * File:   conf_rfa_core.h
+ * File:   conf_reactor.h
  * Author: Tendril
  *
- * Created on March 27, 2018, 11:24 PM
  */
 
-#ifndef CONF_REACTOR_CORE_H
-#define CONF_REACTOR_CORE_H
+#ifndef CONF_REACTOR_H
+#define CONF_REACTOR_H
 
 /* software platform configuration */
 
@@ -27,5 +26,5 @@
 
 #define RPI_KERNEL                      RPI_KERNEL_FREERTOS
 
-#endif /* CONF_REACTOR_CORE_H */
+#endif /* CONF_REACTOR_H */
 
