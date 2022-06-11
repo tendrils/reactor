@@ -2,3 +2,4 @@ build/*
 module/*/build/*
 build-host.conf
 **/.vscode/ipch
+**/.vscode/*.log
